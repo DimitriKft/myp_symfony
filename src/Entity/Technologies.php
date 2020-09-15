@@ -95,4 +95,10 @@ class Technologies
 
         return $this;
     }
+
+     public function __toString()
+    {
+       // return (string) $this->technologies;
+        return $this->name;
+    }
 }

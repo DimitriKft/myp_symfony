@@ -48,6 +48,7 @@ class Projects
      * @ORM\ManyToOne(targetEntity=Users::class, inversedBy="users")
      */
     private $user;
+    
 
     /**
      * @ORM\ManyToMany(targetEntity=Technologies::class, inversedBy="technologies")
@@ -135,6 +136,7 @@ class Projects
 
         return $this;
     }
+   
 
     /**
      * @return Collection|Technologies[]
@@ -158,7 +160,6 @@ class Projects
         if ($this->technology->contains($technology)) {
             $this->technology->removeElement($technology);
         }
-
         return $this;
     }
 }

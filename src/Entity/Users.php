@@ -2,10 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\UsersRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\UsersRepository;
+use Doctrine\Common\Collections\Collection;
+use Symfony\Component\Serializer\Serializer;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 
 /**
  * @ORM\Entity(repositoryClass=UsersRepository::class)
@@ -132,4 +134,11 @@ class Users
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return $this->last_name;
+    }
+
+
 }
