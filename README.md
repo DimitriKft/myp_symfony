@@ -1,29 +1,54 @@
-Symfony Bundle Skeleton
-The "Symfony Bundle Skeleton" is an application for creating reusable Symfony bundles. Forked from [symfony/demo][1]
+# Portfolio Symfony
 
-Requirements
-* PHP 7.2.9 or higher; * PDO-SQLite PHP extension enabled; * and the [usual Symfony application requirements][2].
+Développement du portfolio avec Symfony
 
-Installation
-$ git clone https://github.com/msalsas/symfony-bundle-skeleton.git
-Install Composer dependencies:
 
-$ composer install
-Usage
-Run this command to create the new bundle in /lib:
+### Installation
 
-$ php bin/console skeleton-bundle:create
-You will be asked for some needed arguments for the bundle structure and files.
+*Prérequi sur votre machine pour le bon fonctionnement de ce projet : (Symfony version 5.0 minimum avec le CLI Symfony, ainsi que : Composer)
 
-There's no need to configure anything to run the application. If you have [installed Symfony][4], run this command and access the application in your browser at the given URL (<https://localhost:8000> by default):
+Les étapes pour installer le projet.
 
-$ cd symfony-bundle-skeleton/
-$ symfony serve
-If you don't have the Symfony binary installed, run php -S localhost:8000 -t public/ to use the built-in PHP web server or [configure a web server][3] like Nginx or Apache to run the application.
+Après avoir cloner le projet avec ``git clone https://github.com/DimitriKft/myp_symfony.git``.
 
-Tests
-Execute this command to run tests:
+Executez la commande ``cd myp_symfony`` pour vous rendre dans le dossier depuis le terminal.
 
-$ cd symfony-bundle-skeleton/
-$ ./bin/phpunit
-[1]: https://github.com/symfony/demo [2]: https://symfony.com/doc/current/reference/requirements.html [3]: https://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html [4]: https://symfony.com/download [5]: https://github.com/symfony/webpack-encore
+Ensuite, dans l'ordre taper la commande : 
+
+-1 "composer install" afin d'installer toutes les dépendances du projet.
+
+-2 installer la base de donnée MySQL : "symfony console doctrine:database:create".
+
+-3 Préparer la migration en Base de donnée : "symfony console make:migration"
+
+-4 Exécuter la migration en base de donnée : "symfony console doctrine:migration:migrate"
+
+-5 Vous pouvez maintenant accéder à votre portfolio en vous connectant au serveur : "symfony server:start"
+
+
+
+## Démarrage
+
+Une fois sur l'application, il ne vous reste plus qu'a vous connecter au back-office en ajouter dans l'URL ``/admin``.
+
+Nom d’utilisateur :  ``admin``
+
+Mot de Passe: ``admin`` 
+
+## Fabriqué avec
+
+Projet déveloper avec:
+
+* [Symfont](https://symfony.com/) - Framework PHP Symfony
+
+## Versions
+
+**Latest Stable Release:** 5.1.5
+
+## Auteurs
+Listez le(s) auteur(s) du projet ici !
+* **Caroline chatelon** _alias_ [@Rocalinecht](https://github.com/Rocalinecht)
+* **Abdellah Skoundri** _alias_ [@Abdellah-SK](https://github.com/Abdellah-Sk)
+* **Abdellah Skoundri** _alias_ [@DimitriKft](https://github.com/DimitriKft)
+
+
