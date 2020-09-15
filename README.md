@@ -15,15 +15,15 @@ Executez la commande ``cd myp_symfony`` pour vous rendre dans le dossier depuis 
 
 Ensuite, dans l'ordre taper la commande : 
 
--1 "composer install" afin d'installer toutes les dépendances du projet.
+-1 ``composer install`` afin d'installer toutes les dépendances du projet.
 
--2 installer la base de donnée MySQL : "symfony console doctrine:database:create".
+-2 installer la base de donnée MySQL : ``symfony console doctrine:database:create``.
 
--3 Préparer la migration en Base de donnée : "symfony console make:migration"
+-3 Préparer la migration en Base de donnée : ``symfony console make:migration``
 
--4 Exécuter la migration en base de donnée : "symfony console doctrine:migration:migrate"
+-4 Exécuter la migration en base de donnée : ``symfony console doctrine:migration:migrate``
 
--5 Vous pouvez maintenant accéder à votre portfolio en vous connectant au serveur : "symfony server:start"
+-5 Vous pouvez maintenant accéder à votre portfolio en vous connectant au serveur : ``symfony server:start``
 
 
 
