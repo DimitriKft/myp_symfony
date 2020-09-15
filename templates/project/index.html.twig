@@ -3,7 +3,16 @@
 {% block title %}Hello ProjectController!{% endblock %}
 
 {% block body %}
+<h1>Page Projet</h1>
 {% for project in projects %}
     <p>{{ project.name }}</p>
+    <div>
+        <img style="width: 200px; height:200px;" src="{{ project.image }}" alt="">
+    </div>
+    <p>{{ project.description }}</p>
+    <a href="{{ project.website_url }}">{{ project.website_url }}</a>
+    <a href="{{ project.repo_url }}">{{ project.repo_url }}</a>
+
+
 {% endfor %}
 {% endblock %}

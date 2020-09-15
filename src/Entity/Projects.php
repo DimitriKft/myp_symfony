@@ -101,24 +101,24 @@ class Projects
         return $this;
     }
 
-    public function getRepoUrl(): ?string
+    public function getrepo_url(): ?string
     {
         return $this->repo_url;
     }
 
-    public function setRepoUrl(?string $repo_url): self
+    public function setrepo_url(?string $repo_url): self
     {
         $this->repo_url = $repo_url;
 
         return $this;
     }
 
-    public function getWebsiteUrl(): ?string
+    public function getwebsite_url(): ?string
     {
         return $this->website_url;
     }
 
-    public function setWebsiteUrl(?string $website_url): self
+    public function setwebsite_url(?string $website_url): self
     {
         $this->website_url = $website_url;
 
@@ -161,5 +161,10 @@ class Projects
             $this->technology->removeElement($technology);
         }
         return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->technology;
     }
 }

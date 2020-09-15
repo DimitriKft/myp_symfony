@@ -1,8 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Page d'acceuil{% endblock %}
 
 {% block body %}
 <h1>Page d'acceuil</h1>
+{% for project in projects %}
+    <li>{{ project.name }}</li>
+{% endfor %}
+
 {% endblock %}
 
