@@ -48,7 +48,6 @@ Projet déveloper avec:
 **Version** 0.0.1
 
 ## Auteurs
-Listez le(s) auteur(s) du projet ici !
 * **Caroline chatelon** _alias_ [@Rocalinecht](https://github.com/Rocalinecht)
 * **Abdellah Skoundri** _alias_ [@Abdellah-SK](https://github.com/Abdellah-Sk)
 * **Abdellah Skoundri** _alias_ [@DimitriKft](https://github.com/DimitriKft)
