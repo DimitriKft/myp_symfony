@@ -9,21 +9,21 @@ Développement du portfolio avec Symfony
 
 Les étapes pour installer le projet.
 
-Après avoir cloner le projet avec ``git clone https://github.com/DimitriKft/myp_symfony.git``.
+Après avoir cloner le projet avec ``git clone https://github.com/DimitriKft/myp_symfony.git``
 
 Executez la commande ``cd myp_symfony`` pour vous rendre dans le dossier depuis le terminal.
 
-Ensuite, dans l'ordre taper la commande : 
+Ensuite, dans l'ordre taper les commandes : 
 
--1 ``composer install`` afin d'installer toutes les dépendances du projet.
+- 1 ``composer install`` afin d'installer toutes les dépendances du projet.
 
--2 installer la base de donnée MySQL : ``symfony console doctrine:database:create``.
+- 2 installer la base de donnée MySQL : ``symfony console doctrine:database:create``
 
--3 Préparer la migration en Base de donnée : ``symfony console make:migration``
+- 3 Préparer la migration en base de donnée : ``symfony console make:migration``
 
--4 Exécuter la migration en base de donnée : ``symfony console doctrine:migration:migrate``
+- 4 Exécuter la migration en base de donnée : ``symfony console doctrine:migration:migrate``
 
--5 Vous pouvez maintenant accéder à votre portfolio en vous connectant au serveur : ``symfony server:start``
+- 5 Vous pouvez maintenant accéder à votre portfolio en vous connectant au serveur : ``symfony server:start``
 
 
 
@@ -39,11 +39,13 @@ Mot de Passe: ``admin``
 
 Projet déveloper avec:
 
-* [Symfont](https://symfony.com/) - Framework PHP Symfony
+* [Symfony](https://symfony.com/) - Framework PHP Symfony
+**Latest Stable Release:** 5.1.5
+
 
 ## Versions
 
-**Latest Stable Release:** 5.1.5
+**Version** 0.0.1
 
 ## Auteurs
 Listez le(s) auteur(s) du projet ici !
