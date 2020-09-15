@@ -9,7 +9,7 @@ Développement du portfolio avec Symfony
 
 Les étapes pour installer le projet.
 
-Après avoir cloner le projet avec ``git clone https://github.com/DimitriKft/myp_symfony.git``
+Après avoir cloné le projet avec ``git clone https://github.com/DimitriKft/myp_symfony.git``
 
 Executez la commande ``cd myp_symfony`` pour vous rendre dans le dossier depuis le terminal.
 
@@ -37,7 +37,7 @@ Mot de Passe: ``admin``
 
 ## Fabriqué avec
 
-Projet déveloper avec:
+Projet développé avec:
 
 * [Symfony](https://symfony.com/) - Framework PHP Symfony
 **Latest Stable Release:** 5.1.5
@@ -50,6 +50,6 @@ Projet déveloper avec:
 ## Auteurs
 * **Caroline chatelon** _alias_ [@Rocalinecht](https://github.com/Rocalinecht)
 * **Abdellah Skoundri** _alias_ [@Abdellah-SK](https://github.com/Abdellah-Sk)
-* **Abdellah Skoundri** _alias_ [@DimitriKft](https://github.com/DimitriKft)
+* **Dimitri Klopfstein** _alias_ [@DimitriKft](https://github.com/DimitriKft)
 
 
