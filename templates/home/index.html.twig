@@ -3,7 +3,31 @@
 {% block title %}Page d'acceuil{% endblock %}
 
 {% block body %}
-<h1>Page d'acceuil</h1>
+
+    <header>
+        <p>John Smith</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/project">Projet</a></li>
+            <li><a href="/contact">Contact</a></li>
+           
+        </ul>
+    </nav>
+
+<div class="container">
+    <section>
+        <h1>John Smith</h1>
+    </section>
+</div>
+
+{# <h1>Page d'acceuil</h1>
+<p>loremm truc chouette</p>
+
+<button type="button" class="btn btn-primary">Primary</button>  #}
+
 {% for project in projects %}
     <li>{{ project.name }}</li>
 {% endfor %}

@@ -1,0 +1,34 @@
+@import "navbar.scss";
+@import "../lib/responsive.scss";
+
+$bleu: rgb(105, 143, 214);
+// body, html {
+//     height: 100%;
+//     margin: 0;
+// }
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    // margin-left: 120px;
+    min-height: 100%;
+    position: relative;
+    // left: 0;
+    z-index: 1;
+    section {
+        background: red;
+        margin-top: 60px;
+        height: 300px;
+        
+        
+    }
+}
+
+@media #{$medium-up}{
+    button{ width:100%;}
+}
+
