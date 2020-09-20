@@ -101,24 +101,24 @@ class Projects
         return $this;
     }
 
-    public function getrepo_url(): ?string
+    public function getRepoUrl(): ?string
     {
         return $this->repo_url;
     }
 
-    public function setrepo_url(?string $repo_url): self
+    public function setRepoUrl(?string $repo_url): self
     {
         $this->repo_url = $repo_url;
 
         return $this;
     }
 
-    public function getwebsite_url(): ?string
+    public function getWebsiteUrl(): ?string
     {
         return $this->website_url;
     }
 
-    public function setwebsite_url(?string $website_url): self
+    public function setWebsiteUrl(?string $website_url): self
     {
         $this->website_url = $website_url;
 
