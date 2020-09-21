@@ -22,19 +22,17 @@
                 <div class='item_logo'> <a href="#"><img src='{{ asset('img/Icon-github.png') }}'/><span>Github</span></a></div>
             </div>
         </header>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/project">Projet</a></li>
-            <li><a href="/contact">Contact</a></li>  
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/project">Projet</a></li>
+                <li><a href="/contact">Contact</a></li>  
+            </ul>
+        </nav>
         <div class="container">
-        {% block body %}{% endblock %}
+            {% block body %}{% endblock %}
         </div>
-        {{ encore_entry_script_tags('app') }}
-
-    
+        {{ encore_entry_script_tags('app') }}    
         {% block javascripts %}{% endblock %}
     </body>
 </html>
