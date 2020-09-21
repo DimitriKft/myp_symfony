@@ -44,6 +44,19 @@
         }
         
     }
+    section{
+        border:2px solid red;
+        .home_projects{
+            margin-top: 25%;
+            margin-left: 10%;
+            // border:2px solid purple;
+            hr{
+                margin-bottom: 4% !important;
+                position: absolute;
+                margin-left: -90px;
+            }
+        }
+    }
 }
 
 // -> Responsive 
