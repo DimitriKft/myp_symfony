@@ -5,6 +5,11 @@ security:
             algorithm: auto
     providers:
         users_in_memory: { memory: null }
+
+        in_database:
+            entity:
+                class: App\Entity\Users
+                property: email
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
@@ -12,7 +17,18 @@ security:
         main:
             anonymous: true
             lazy: true
-            provider: users_in_memory
+            #provider: users_in_memory
+            provider: in_database
+
+            form_login:
+                login_path: login
+                check_path: login
+            
+            logout:
+                path: logout
+                target: login 
+
+            # logout:
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
@@ -23,5 +39,5 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
