@@ -5,9 +5,9 @@
 {% block body %}
     <h1>Login</h1>
 
-    {# {% if error %}
+    {% if error %}
        {{ error.messageKey | trans(error.messagedata, 'security') }}
-    {% endif %} #}
+    {% endif %}
 
     <form action="{{ path('login') }}" method="POST">
         <div>

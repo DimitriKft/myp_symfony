@@ -74,6 +74,11 @@ class Users implements UserInterface
      */
     private $users;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $roles;
+
     public function __construct()
     {
         $this->users = new ArrayCollection();
@@ -187,7 +192,7 @@ class Users implements UserInterface
 
     public function getRoles()
     {
-     return ['ROLE_USER'];   
+     return [$this->roles];   
     }
 
     public function getUsername()
@@ -198,6 +203,19 @@ class Users implements UserInterface
     public function __toString()
     {
         return $this->last_name;
+    }
+
+    public function setRoles(?string $roles): self
+    {
+        if($roles === null)
+        {
+            $this->roles = "ROLE_USER";
+        }
+        else
+        {
+            $this->roles = $roles;
+        }
+        return $this;
     }
 
 

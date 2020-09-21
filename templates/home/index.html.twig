@@ -4,9 +4,19 @@
 
 {% block body %}
 <h1>Page d'acceuil</h1>
-<a href="{{ path('register') }}">Inscription</a>
-<a href="{{ path('login') }}">Connexion</a>
-<a href="{{ path('logout') }}">Deconnexion</a>
+
+
+    {% if app.user %}
+        <a href="{{ path('logout') }}">Deconnexion</a>
+    {% else %}
+        <a href="{{ path('register') }}">Inscription</a>
+        <a href="{{ path('login') }}">Connexion</a>
+    {% endif %}
+
+    {% if is_granted('ROLE_ADMIN')%}
+        <a href="{{ path('admin') }}">admin</a>
+    {% endif %}
+
 {% for project in projects %}
     <li>{{ project.name }}</li>
 {% endfor %}
