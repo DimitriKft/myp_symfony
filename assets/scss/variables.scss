@@ -6,6 +6,13 @@ $color_primary: rgb(15, 76, 129);
 
 $medium-up:"only screen and (max-width: 768px)";
 
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+
 h1,h2,h3,p{
     color: black;
     font-family: 'Roboto', sans-serif;

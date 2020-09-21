@@ -1,36 +1,24 @@
 @import "navbar.scss";
+@import "../variables.scss";
 
-
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
+// -> PAGE ACCUEIL
 .container {
-    
     width: 67%;
-    // min-height: 100%;
     position: relative;
-     border:2px solid black;
+    //  border:2px solid black;
     z-index: 3;
     margin-top: 1%;
     section {
-
         display: flex;
         align-items: center;
-        // height: 300px;
         img{
             height: 550px;
             width: auto;
             border-radius: 13px;
             margin-right: 3%;
-            box-shadow: 14px 15px 31px #F2F2F2;
-            
+            box-shadow: 14px 15px 31px #F2F2F2;          
         }
-        hr{
-            margin-bottom: 450%;
-            
-        }
+        hr{margin-bottom: 450%;}
         div{
             // border:2px solid green;
             width: auto;
@@ -38,19 +26,27 @@ body, html {
             justify-content: start;
             flex-direction: column;
             margin-left: 2%;
-            p{
-                font-size: 0.75em;
-                // text-align: justify;
-            }
-        }
-        
+            p{font-size: 0.75em;}
+        } 
     }
     .view_project{
-        border:2px solid blueviolet;
+        // border:2px solid blueviolet;
+        position: absolute;
+        margin-left: 110%;
+        margin-top: -10%;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        span{
+            text-transform: uppercase;
+            font-size: small;
+            color:$color_primary;
+            font-weight: normal;
+        }
         
     }
 }
 
+// -> Responsive 
 @media #{$medium-up}{
     .container{
         margin-left:20%;
@@ -76,6 +72,7 @@ body, html {
                 
             }
         }
+        .view_project{ display: none;}
     }
 }
 
