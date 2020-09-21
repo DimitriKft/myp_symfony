@@ -1,1 +1,19 @@
-$medium-up:"only screen and (max-width: 768px)"
+$medium-up:"only screen and (max-width: 768px)";
+
+// @media #{$medium-up}{
+//     nav{ width:10%;}
+// }
+
+@media #{$medium-up}{
+    header{ 
+        width:20%;
+        span{
+            // overflow: hidden;
+            display: none;
+        }
+        img{
+            margin-right: 0px;
+            
+        }
+    }
+}
