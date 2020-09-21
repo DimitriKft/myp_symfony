@@ -9,7 +9,7 @@
     {% if app.user %}
         <a href="{{ path('logout') }}">Deconnexion</a>
     {% else %}
-        <a href="{{ path('register') }}">Inscription</a>
+        {# <a href="{{ path('register') }}">Inscription</a> #}
         <a href="{{ path('login') }}">Connexion</a>
     {% endif %}
 

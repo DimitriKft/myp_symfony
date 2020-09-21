@@ -20,6 +20,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 class Users implements UserInterface
 {
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
