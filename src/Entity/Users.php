@@ -7,10 +7,15 @@ use App\Repository\UsersRepository;
 use Doctrine\Common\Collections\Collection;
 use Symfony\Component\Serializer\Serializer;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=UsersRepository::class)
+ * @UniqueEntity(
+ * fields={"email"},
+ * message = "Cette email est déjà enregistré")
  */
 class Users
 {
@@ -33,14 +38,34 @@ class Users
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Email(
+     * message = "The email '{{ value }}' is not a valid email."
+     * )
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     *      min = 5,
+     *      max = 20,
+     *      minMessage = "Votre mot de passe est trop court, il faut plus de {{ limit }} caractèrescaractères",
+     *      maxMessage = "Votre mot de passe est trop long, il faut moins de {{ limit }} characters",
+     *      allowEmptyString = false
+     * )
      */
     private $password;
 
+     /**
+     *  @Assert\EqualTo(propertyPath ="password", message = "Vos mots de passe de sont pas équivalents")
+     *  @Assert\Length(
+     *      min = 5,
+     *      max = 20,
+     *      minMessage = "Votre mot de passe est trop court, il faut plus de {{ limit }} caractèrescaractères",
+     *      maxMessage = "Votre mot de passe est trop long, il faut moins de {{ limit }} characters",
+     *      allowEmptyString = false
+     * )
+     */
     private $passwordVerification;
 
     /**
