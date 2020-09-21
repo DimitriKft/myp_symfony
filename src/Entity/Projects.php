@@ -55,6 +55,11 @@ class Projects
      */
     private $technology;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $createdat;
+
     public function __construct()
     {
         $this->technology = new ArrayCollection();
@@ -166,5 +171,17 @@ class Projects
     public function __toString()
     {
         return $this->technology;
+    }
+
+    public function getCreatedat(): ?\DateTimeInterface
+    {
+        return $this->createdat;
+    }
+
+    public function setCreatedat(?\DateTimeInterface $createdat): self
+    {
+        $this->createdat = $createdat;
+
+        return $this;
     }
 }

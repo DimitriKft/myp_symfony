@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Projects;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
@@ -23,10 +24,10 @@ class ProjectsCrudController extends AbstractCrudController
         return [
             TextField::new('name'),
             TextEditorField::new('description'),
-            ImageField::new('image'),
+            TextField::new('image'),
             TextField::new('repo_url'),
             TextField::new('website_url'),
-            DateTimeField::new('created'),
+            DateField::new('createdat'),
             AssociationField::new('user'),
             AssociationField::new('technology')
         ];
