@@ -4,6 +4,7 @@
 
 {% block body %}
 <h1>Page d'acceuil</h1>
+<a href="{{ path('register') }}">Inscription</a>
 {% for project in projects %}
     <li>{{ project.name }}</li>
 {% endfor %}

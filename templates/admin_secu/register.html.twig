@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+        {{ form_row(form.email, {
+            "attr" : {'placeholder': "Saisir votre email"},
+            "label" : "Votre email"
+        }) }}
+        {{ form_widget(form) }}
+    <input type="submit" value="Valider">
+    {{ form_end(form) }}
+{% endblock %}

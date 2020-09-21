@@ -41,6 +41,8 @@ class Users
      */
     private $password;
 
+    private $passwordVerification;
+
     /**
      * @ORM\OneToMany(targetEntity=Projects::class, mappedBy="user")
      */
@@ -100,6 +102,18 @@ class Users
     public function setPassword(string $password): self
     {
         $this->password = $password;
+
+        return $this;
+    }
+
+    public function getPasswordVerification(): ?string
+    {
+        return $this->passwordVerification;
+    }
+
+    public function setPasswordVerification(string $passwordVerification): self
+    {
+        $this->passwordVerification = $passwordVerification;
 
         return $this;
     }
