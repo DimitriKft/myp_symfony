@@ -1,5 +1,8 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    encoders:
+        App\Entity\Users:
+            algorithm: auto
     providers:
         users_in_memory: { memory: null }
     firewalls:

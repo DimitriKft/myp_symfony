@@ -10,6 +10,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UsersRepository::class)
@@ -17,7 +18,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * fields={"email"},
  * message = "Cette email est déjà enregistré")
  */
-class Users
+class Users implements UserInterface
 {
     /**
      * @ORM\Id
@@ -172,6 +173,26 @@ class Users
         }
 
         return $this;
+    }
+
+    public function eraseCredentials()
+    {
+        
+    }
+
+    public function getSalt()
+    {
+        
+    }
+
+    public function getRoles()
+    {
+     return ['ROLE_USER'];   
+    }
+
+    public function getUsername()
+    {
+        return (string) $this->email;
     }
 
     public function __toString()
