@@ -56,6 +56,11 @@ class Projects
      */
     private $createdat;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="projects")
+     */
+    private $user;
+
     public function __construct()
     {
         $this->technology = new ArrayCollection();
@@ -164,6 +169,18 @@ class Projects
     public function setCreatedat(?\DateTimeInterface $createdat): self
     {
         $this->createdat = $createdat;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }
