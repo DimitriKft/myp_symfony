@@ -44,10 +44,6 @@ class Projects
      */
     private $website_url;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Users::class, inversedBy="users")
-     */
-    private $user;
     
 
     /**
@@ -129,19 +125,6 @@ class Projects
 
         return $this;
     }
-
-    public function getUser(): ?Users
-    {
-        return $this->user;
-    }
-
-    public function setUser(?Users $user): self
-    {
-        $this->user = $user;
-
-        return $this;
-    }
-   
 
     /**
      * @return Collection|Technologies[]

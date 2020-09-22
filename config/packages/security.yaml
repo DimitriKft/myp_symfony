@@ -1,14 +1,20 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     encoders:
-        App\Entity\Users:
+        App\Entity\User:
             algorithm: auto
+
     providers:
         users_in_memory: { memory: null }
 
         in_database:
             entity:
                 class: App\Entity\Users
+                property: email
+        # used to reload user from session & other features (e.g. switch_user)
+        app_user_provider:
+            entity:
+                class: App\Entity\User
                 property: email
     firewalls:
         dev:
@@ -20,13 +26,17 @@ security:
             #provider: users_in_memory
             provider: in_database
 
-            form_login:
-                login_path: login
-                check_path: login
+            # form_login:
+                # login_path: login
+                # check_path: login
             
             logout:
-                path: logout
-                target: login 
+                path: app_logout
+                # where to redirect after logout
+                target: app_login
+            guard:
+                authenticators:
+                    - App\Security\LoginFormAuthenticator
 
             # logout:
 

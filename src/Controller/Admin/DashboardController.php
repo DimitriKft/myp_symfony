@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\User;
 use App\Entity\Users;
 use App\Entity\Projects;
 use App\Entity\Technologies;
@@ -40,7 +41,7 @@ class DashboardController extends AbstractDashboardController
             MenuItem::section('C.R.U.D'),
             MenuItem::linkToCrud('Projets', 'fa fa-tags', Projects::class),
             MenuItem::linkToCrud('Technologie', 'fa fa-tags', Technologies::class),
-            MenuItem::linkToCrud('Utilisateurs', 'fa fa-tags', Users::class)
+            MenuItem::linkToCrud('Utilisateurs', 'fa fa-tags', User::class)
         ];
     }
 }

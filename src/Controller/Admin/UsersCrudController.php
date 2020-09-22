@@ -2,7 +2,7 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Users;
+use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ArrayField;
@@ -14,7 +14,7 @@ class UsersCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string
     {
-        return Users::class;
+        return User::class;
     }
 
     public function configureFields(string $pageName): iterable
