@@ -3,18 +3,14 @@
 {% block title %}Hello ProjectController!{% endblock %}
 
 {% block body %}
-<<<<<<< HEAD
-<h1>Page Projet</h1>
-=======
-    <h2> projet name</h2>
->>>>>>> 9f8cb3ba46360ea92c3eee28da4696c1b47c090f
+    <h2> Page projet</h2>
 {% for project in projects %}
     <p>{{ project.name }}</p>
     <div>
         <img style="width: 200px; height:200px;" src="{{ project.image }}" alt="">
     </div>
     <p>{{ project.description }}</p>
-    <a href="{{ project.website_url }}">{{ project.website_url }}</a>
+    <a href="{{ project.website_url }}">{{ project.website_url }}</a><br>
     <a href="{{ project.repo_url }}">{{ project.repo_url }}</a>
 
 

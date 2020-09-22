@@ -33,19 +33,7 @@ class Projects
      * @ORM\Column(type="string", length=255)
      */
     private $image;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $repo_url;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $website_url;
-
     
-
     /**
      * @ORM\ManyToMany(targetEntity=Technologies::class, inversedBy="technologies")
      */
@@ -60,6 +48,16 @@ class Projects
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="projects")
      */
     private $user;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $repoUrl;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $websiteUrl;
 
     public function __construct()
     {
@@ -107,29 +105,6 @@ class Projects
         return $this;
     }
 
-    public function getRepo_url(): ?string
-    {
-        return $this->repo_url;
-    }
-
-    public function setRepo_url(?string $repo_url): self
-    {
-        $this->repo_url = $repo_url;
-
-        return $this;
-    }
-
-    public function getWebsite_url(): ?string
-    {
-        return $this->website_url;
-    }
-
-    public function setWebsite_url(?string $website_url): self
-    {
-        $this->website_url = $website_url;
-
-        return $this;
-    }
 
     /**
      * @return Collection|Technologies[]
@@ -181,6 +156,30 @@ class Projects
     public function setUser(?User $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getRepoUrl(): ?string
+    {
+        return $this->repoUrl;
+    }
+
+    public function setRepoUrl(?string $repoUrl): self
+    {
+        $this->repoUrl = $repoUrl;
+
+        return $this;
+    }
+
+    public function getWebsiteUrl(): ?string
+    {
+        return $this->websiteUrl;
+    }
+
+    public function setWebsiteUrl(?string $websiteUrl): self
+    {
+        $this->websiteUrl = $websiteUrl;
 
         return $this;
     }
