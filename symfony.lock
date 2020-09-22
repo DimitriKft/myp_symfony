@@ -112,6 +112,9 @@
     "egulias/email-validator": {
         "version": "2.1.20"
     },
+    "fzaninotto/faker": {
+        "version": "v1.9.1"
+    },
     "monolog/monolog": {
         "version": "2.1.1"
     },
