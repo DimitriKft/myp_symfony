@@ -101,4 +101,5 @@ class Technologies
        // return (string) $this->technologies;
         return $this->name;
     }
+    
 }
