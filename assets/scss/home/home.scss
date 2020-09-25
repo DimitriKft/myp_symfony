@@ -45,8 +45,8 @@
         
     }
     section{
-        border:2px solid red;
-        .home_projects{
+        // border:2px solid blue;
+        .home_projects, .intro_contact{
             margin-top: 25%;
             margin-left: 10%;
             // border:2px solid purple;
@@ -55,8 +55,37 @@
                 position: absolute;
                 margin-left: -90px;
             }
+            .title_h2{
+                width: 130%;
+            }
+            
         }
     }
+     #contact{
+         //width: 150%;
+         //border:2px solid green;
+         .intro_contact{
+
+             hr{
+                // margin-bottom: 4% !important;
+                // position: absolute;
+                margin-left: 250px;
+            }
+         } 
+        
+        .intro_contact-text{
+            font-size: 1.5em;
+            font-weight:600 ;
+            //border:2px solid red;
+            margin-top: 7%;
+            text-align: center;
+            width: 70%;
+            // padding: 20%;
+            margin: 15%;
+
+        }
+    }
+    
 }
 
 // -> Responsive 
@@ -86,6 +115,7 @@
             }
         }
         .view_project{ display: none;}
+       
     }
 }
 

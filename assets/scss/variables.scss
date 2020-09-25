@@ -3,6 +3,7 @@
 $border: #F7F7F7;
 $background: #FFFFFF;
 $color_primary: rgb(15, 76, 129);
+$shadow_title: #C9C9C9C9;
 
 $medium-up:"only screen and (max-width: 768px)";
 
@@ -30,21 +31,27 @@ h1{
     @media #{$medium-up}{font-size: 3em;}
 }
 h2{
-    font-size: 2.5em ;
+    font-size: 3.5em ;
     font-weight: 800;
-    // position: absolute;
-    // transform: translate(-50%, -50%);
+    position: absolute;
     letter-spacing: 0.1em;
-    // -webkit-text-fill-color: black;
-    // -webkit-text-stroke-width: 3px;
-    // // -webkit-text-stroke-color: gray;
-    // text-shadow: 48px 28px rebeccapurple,
-    //             20px 20px red;
-    text-shadow: 14px -12px 0px  #f2F2F2F2;
-
-
-
+    z-index: 2;
+    @media #{$medium-up}{
+        font-size: 2.3em;
+        text-align: start;
+        letter-spacing: none;
+    }
 }
+.title_h2 span{
+    color: $shadow_title;
+                    font-size: 5em;
+                    font-weight: 800;
+                    opacity: 0.2;
+                    margin-top: -5%;
+                    margin-left: 3%;
+                    letter-spacing: 0.1em;
+                    @media #{$medium-up}{font-size: 2.3em; text-align: start;}
+                }
 
 h3{
     
