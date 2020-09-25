@@ -5,117 +5,103 @@
 .container {
     width: 67%;
     position: relative;
-    //  border:2px solid black;
     z-index: 3;
     margin-top: 1%;
+    @media #{$medium-up}{ margin-left:20%;}
+    // Header
     section {
         display: flex;
         align-items: center;
+        @media #{$medium-up}{ 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         img{
             height: 550px;
             width: auto;
             border-radius: 13px;
             margin-right: 3%;
-            box-shadow: 14px 15px 31px #F2F2F2;          
+            box-shadow: 14px 15px 31px #F2F2F2;
+            @media #{$medium-up}{
+                height: 350px !important; 
+                width: 250px !important;  
+            }
         }
-        hr{margin-bottom: 450%;}
+        hr{
+            margin-bottom: 450%;
+            @media #{$medium-up}{ 
+                position: absolute;
+                margin-top: 15%;
+                margin-left: -180px;
+            }
+        }
         div{
-            // border:2px solid green;
             width: auto;
             display: flex;
             justify-content: start;
             flex-direction: column;
             margin-left: 2%;
+            @media #{$medium-up}{ 
+                width: auto;
+                text-align: center;
+                margin-top: 7%;
+            }
             p{font-size: 0.75em;}
         } 
     }
     .view_project{
-        // border:2px solid blueviolet;
         position: absolute;
         margin-left: 110%;
         margin-top: -10%;
         writing-mode: vertical-rl;
         text-orientation: mixed;
+        @media #{$medium-up}{display: none;}
         span{
             text-transform: uppercase;
             font-size: small;
             color:$color_primary;
             font-weight: normal;
         }
-        
     }
+    // Projet
     section{
-        // border:2px solid blue;
         .home_projects, .intro_contact{
             margin-top: 25%;
             margin-left: 10%;
-            // border:2px solid purple;
             hr{
                 margin-bottom: 4% !important;
                 position: absolute;
                 margin-left: -90px;
+                @media #{$medium-up}{margin-left: -65px;}
             }
-            .title_h2{
-                width: 130%;
-            }
-            
+            .title_h2{width: 130%;}  
         }
     }
-     #contact{
-         //width: 150%;
-         //border:2px solid green;
-         .intro_contact{
-
+    // Contact
+     section{
+        .intro_contact{@media #{$medium-up}{margin-left: 5px;}
              hr{
-                // margin-bottom: 4% !important;
-                // position: absolute;
                 margin-left: 250px;
+                @media #{$medium-up}{margin-left: -40px;}
             }
-         } 
-        
+            .title_contact{
+                margin-left: 45% ; 
+                @media #{$medium-up}{margin-left:5%;}
+            }
+        } 
         .intro_contact-text{
             font-size: 1.5em;
             font-weight:600 ;
-            //border:2px solid red;
             margin-top: 7%;
             text-align: center;
             width: 70%;
-            // padding: 20%;
             margin: 15%;
-
+            @media #{$medium-up}{margin:25%;}
         }
     }
-    
 }
 
-// -> Responsive 
-@media #{$medium-up}{
-    .container{
-        margin-left:20%;
-        section{
-            display: flex;
-            flex-direction: column;
-            // margin-top: 5%;
-            justify-content: center;
-            align-items: center;
-            img{
-                height: 350px !important; 
-                width: 250px !important;  
-            }
-            hr{
-                position: absolute;
-                margin-top: 15%;
-                margin-left: -180px;
-            }
-            div{
-                width: auto;
-                text-align: center;
-                margin-top: 7%;
-                
-            }
-        }
-        .view_project{ display: none;}
-       
-    }
-}
+
 
