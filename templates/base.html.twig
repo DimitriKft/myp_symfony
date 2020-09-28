@@ -29,9 +29,37 @@
                 <li><a href="/contact">Contact</a></li>  
             </ul>
         </nav>
-        <div class="container">
-            {% block body %}{% endblock %}
-        </div>
+        <main>
+            <div class="container">
+                {% block body %}{% endblock %}
+            </div>
+        </main>
+
+        <footer>
+            <a href="/">
+            <div class="logo">
+                <span class="circle">J</span>
+                <span><p>Abdellah Skoundri</p></span>
+            </div>
+            </a>    
+            <div class="link">
+                <div class='item_logo'> <a href="#"><img src='{{ asset('img/Icon-linkedin.png') }}'/></a></div>
+                <div class='item_logo'> <a href="#"><img src='{{ asset('img/Icon-github.png') }}'/></a></div>
+            </div>
+
+            <div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/project">Projet</a></li>
+                <li><a href="/contact">Contact</a></li>  
+            </ul>
+            <div class="make_myp">
+                <p>Make with MYP <b> __</b></p>
+            </div>
+            </div>
+        </footer>
+        
+
         {{ encore_entry_script_tags('app') }}    
         {% block javascripts %}{% endblock %}
     </body>

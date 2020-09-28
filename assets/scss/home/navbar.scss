@@ -13,6 +13,10 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media #{$medium-up}{
+        width:20%;
+        height: 100%;
+    }
     .logo{
         display: flex;
         width: 80%;
@@ -37,6 +41,7 @@ header {
             font-weight: 900;
             font-size: 1.25em;
             margin-top: 15px;
+            @media #{$medium-up}{display: none;}  
         }
     }
     .link{
@@ -53,6 +58,8 @@ header {
             img{
                 margin-right: 20px;
                 height: 70%;
+                @media #{$medium-up}{margin-right: 0px;}  
+
             }
             span{
                 font-family: 'Roboto', sans-serif;
@@ -60,6 +67,7 @@ header {
                 font-size: 1.25em;
                 text-decoration: none;
                 color: black;
+                @media #{$medium-up}{display: none;}  
             }
         }
         
@@ -94,13 +102,84 @@ a{
     }
 }
 
-// -> Responsive
-@media #{$medium-up}{
-    header{ 
-        width:20%;
-        height: 100%;
-        span{display: none;}
-        img{margin-right: 0px;}
+// -> Footer
+footer{
+    border-top : 2px solid $border;;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3 ;
+    position: relative;
+    height: 20%;
+    background-color: $background; 
+    .logo{
+        display: flex;
+        width: 110%;
+        justify-content: space-around;
+        margin-top: 5%;
+        margin-left: 5%;
+        align-items: center;
+        .circle{
+            height: 45px;
+            width: 45px;
+            border:2px solid black;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            font-size: 2em;
+        }
+        span {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 800;
+            font-size: 1.25em;
+            text-decoration: none;
+            color: black;
+            @media #{$medium-up}{display: none;} 
+        }
     }
-    
+    .link{
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        .item_logo{
+            display: flex;
+            img{
+                margin-right: 10px;
+                height: 70%;
+            }           
+        }        
+    }
+    ul {
+        height: 70px;
+        z-index: 1;
+        top: 0;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        @media #{$medium-up}{
+            width: auto;
+        } 
+        li {
+            display: inline;
+            list-style: none;
+            margin: 20px;
+            @media #{$medium-up}{
+                font-size: small;
+                margin: 10%;
+            } 
+        }
+    }
+    .make_myp{
+        text-align: end;
+        p{
+            font-weight: 700;
+            color: $color_primary;
+            font-size: 12px;
+        }
+    }
 }
+
