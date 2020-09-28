@@ -11,7 +11,8 @@
     </div>
     <p>{{ project.description }}</p>
     <a href="{{ project.websiteUrl }}">{{ project.websiteUrl }}</a><br>
-    <a href="{{ project.repoUrl }}">{{ project.repoUrl }}</a>
+    <a href="{{ project.repoUrl }}">{{ project.repoUrl }}</a><br>
+    <a href="{{ path('displayProject',{'id':project.id}) }}" >{{ project.name }}</a>
 
 
 {% endfor %}

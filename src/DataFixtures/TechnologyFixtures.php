@@ -32,7 +32,7 @@ class TechnologyFixtures extends Fixture
 
         $techno4 = new Technologies();
         $techno4->setName('Laravel');
-        $techno4->setSlug('larvel');
+        $techno4->setSlug('laravel');
         $manager->persist($techno4);
 
         $techno5 = new Technologies();
