@@ -4,10 +4,12 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
+         {{ encore_entry_link_tags('app') }}
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
         {% endblock %}
-        {{ encore_entry_link_tags('app') }}
-        <link rel="stylesheet" href="{{ asset('build/css/style.css') }}">
+        {# <link rel="stylesheet" href="{{ asset('build/css/style.css') }}"> #}
+        {# {{ encore_entry_link_tags('app') }}     #}
+
     </head>
     <body>
         <header>
@@ -60,7 +62,8 @@
         </footer>
         
 
+        {% block javascripts %}
         {{ encore_entry_script_tags('app') }}    
-        {% block javascripts %}{% endblock %}
+        {% endblock %}
     </body>
 </html>

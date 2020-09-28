@@ -76,17 +76,26 @@ header {
 }
 // --> Navbar navigation
 nav {
+    // border: 1px solid red;
     height: 70px;
+    position: relative;
     z-index: 1;
     top: 0;
-    width: 100%;
-    left: 0;
+    width: 25%;
+    right: -75%;
+    // text-align: end;
     display: flex;
-    justify-content: end;
+    justify-content: end !important;
     align-items: center;
+    @media #{$medium-up}{
+        width: auto;
+        right: -20%;
+    } 
+    
     li {
         display: inline;
         list-style: none;
+        text-align: end !important;
         margin: 20px;
     }
 }
@@ -110,6 +119,7 @@ footer{
     align-items: center;
     z-index: 3 ;
     position: relative;
+    
     height: 20%;
     background-color: $background; 
     .logo{
@@ -178,7 +188,7 @@ footer{
         p{
             font-weight: 700;
             color: $color_primary;
-            font-size: 12px;
+            font-size: 13px;
         }
     }
 }
