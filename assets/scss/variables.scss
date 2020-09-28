@@ -60,3 +60,16 @@ h3{
     @media #{$medium-up}{font-size: 1em; margin-bottom: 10%;}
 }
 
+button{
+    border:2px solid lightgray;
+    background-color: $background;
+    border-radius: 50px;
+    padding:0 1.5em 0 1.5em;
+    &:hover{
+        background-color: $color_primary;
+        color: white;
+        border:none;
+    }
+    @media #{$medium-up}{margin: 10%;}
+
+}

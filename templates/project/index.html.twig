@@ -3,17 +3,43 @@
 {% block title %}Hello ProjectController!{% endblock %}
 
 {% block body %}
-    <h2> Page projet</h2>
+
+<div class="title_projects">
+
+    <div class="title_h2">
+        <h2>Mes projets</h2>
+        <span>Mes projets</span>
+    </div>       
+</div>
+
+<section class="filter">
+    <span>
+        <label for="pet-select">Triez par :</label>
+
+        <select name="pets" id="pet-select">
+            <option value="">--Choisir une technologie--</option>
+            <option value="dog">React</option>
+            <option value="cat">Wordpress</option>
+            <option value="hamster">Tous</option>
+        </select>
+        <button>Rechercher</button>
+    </span>
+</section>
+
+<section class="all_projects">
 {% for project in projects %}
-    <p>{{ project.name }}</p>
-    <div>
-        <img style="width: 200px; height:200px;" src="{{ project.image }}" alt="">
+    <div class="box_project">
+        
+            <img style="" src="{{ project.image }}" alt="">
+        
+        <div class="projet_contents">
+            <p class="projet_name">{{ project.name }}</p>
+            <p class="projet_description">{{ project.description }}</p>
+            <a class="projet_linkPage" href="{{ path('displayProject',{'id':project.id}) }}" >En savoir plus </a>
+        </div>
     </div>
-    <p>{{ project.description }}</p>
-    <a href="{{ project.websiteUrl }}">{{ project.websiteUrl }}</a><br>
-    <a href="{{ project.repoUrl }}">{{ project.repoUrl }}</a><br>
-    <a href="{{ path('displayProject',{'id':project.id}) }}" >{{ project.name }}</a>
-
-
 {% endfor %}
+
+    </section>
+
 {% endblock %}
