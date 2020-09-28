@@ -1,8 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProjectController!{% endblock %}
+{% block title %}Page project{% endblock %}
 
 {% block body %}
+
+
 <h1>Page Projet</h1>
 <p>{{ project.name }}</p>
 <div>
@@ -11,5 +13,6 @@
 <p>{{ project.description }}</p>
 <a href="{{ project.websiteUrl }}">{{ project.websiteUrl }}</a>
 <a href="{{ project.repoUrl }}">{{ project.repoUrl }}</a>
+
 
 {% endblock %}

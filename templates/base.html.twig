@@ -3,10 +3,64 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+        {% endblock %}
+        {{ encore_entry_link_tags('app') }}
+        <link rel="stylesheet" href="{{ asset('build/css/style.css') }}">
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <header>
+            <a href="/">
+            <div class="logo">
+                <span class="circle">J</span>
+                <span><p>Abdellah Skoundri</p></span>
+            </div>
+            </a>    
+            <div class="link">
+                <div class='item_logo'> <a href="#"><img src='{{ asset('img/Icon-linkedin.png') }}'/><span>Linkedin</span></a></div>
+                <div class='item_logo'> <a href="#"><img src='{{ asset('img/Icon-github.png') }}'/><span>Github</span></a></div>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/project">Projet</a></li>
+                <li><a href="/contact">Contact</a></li>  
+            </ul>
+        </nav>
+        <main>
+            <div class="container">
+                {% block body %}{% endblock %}
+            </div>
+        </main>
+
+        <footer>
+            <a href="/">
+            <div class="logo">
+                <span class="circle">J</span>
+                <span><p>Abdellah Skoundri</p></span>
+            </div>
+            </a>    
+            <div class="link">
+                <div class='item_logo'> <a href="#"><img src='{{ asset('img/Icon-linkedin.png') }}'/></a></div>
+                <div class='item_logo'> <a href="#"><img src='{{ asset('img/Icon-github.png') }}'/></a></div>
+            </div>
+
+            <div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/project">Projet</a></li>
+                <li><a href="/contact">Contact</a></li>  
+            </ul>
+            <div class="make_myp">
+                <p>Make with MYP <b> __</b></p>
+            </div>
+            </div>
+        </footer>
+        
+
+        {{ encore_entry_script_tags('app') }}    
         {% block javascripts %}{% endblock %}
     </body>
 </html>
