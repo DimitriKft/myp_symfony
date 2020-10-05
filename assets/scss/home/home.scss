@@ -87,6 +87,8 @@
                 @media #{$medium-up}{margin-left: -40px;}
             }
             .title_contact{
+                // border:2px solid red;
+                width: 80%;
                 margin-left: 45% ; 
                 @media #{$medium-up}{margin-left:5%;}
             }
