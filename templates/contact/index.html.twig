@@ -3,19 +3,44 @@
 {% block title %}Hello ContactController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    {# <h1>Hello {{ controller_name }}! ✅</h1> #}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/dimitri/Bureau/myp_symfony/src/Controller/ContactController.php'|file_link(0) }}">src/Controller/ContactController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/dimitri/Bureau/myp_symfony/templates/contact/index.html.twig'|file_link(0) }}">templates/contact/index.html.twig</a></code></li>
-    </ul>
+
+<div class="titles">
+ <hr class="project"/>
+    <div class="title_h2">
+        <h2>Contact</h2>
+        <span>Contact</span>
+    </div>       
 </div>
-{{ form(contactForm) }}
+
+<section class="content_contact">
+    <div class="information">
+        <p>Pour une question où juste envie <br/> d'une discution</p>
+        <div>
+            <span><ion-icon name="mail-outline" class="icon_contact"></ion-icon>john.smith@gmail.com</span>
+            <span><ion-icon name="call-outline" class="icon_contact phone"></ion-icon>01 02 03 04 11 33</span>
+        </div>
+    </div>
+
+    <div class="form">
+        <div>
+            <span>
+                <label style="margin-right:40px;">NOM :</label>
+                <input type="text"/>
+            </span>
+            <span>
+                <label style="margin-right:30px;">EMAIL :</label>
+                <input type="text"/>
+            </span>
+            <span>
+                <label style="margin-right:4px;">MESSAGE :</label>
+                <textarea></textarea>
+            </span>
+            <button class="form_button">Envoyer</button>
+        </div>
+    </div>
+
+</section>
+
 {% endblock %}

@@ -81,6 +81,22 @@ button{
     @media #{$medium-up}{margin: 10%;}
 
 }
+.form_button{
+    // border:2px solid lightgray;
+    background-color: $color_primary;
+    border-radius: 25px;
+    width: 110px;
+    height: 35px;
+    color: white;
+    border: none;
+    &:hover{
+        background-color: $color_primary;
+        color: white;
+        border:none;
+    }
+    @media #{$medium-up}{margin: 10%;}
+
+}
 
 ion-icon {
     font-size: 25px;
