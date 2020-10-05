@@ -2,13 +2,13 @@
 {% block title %}Page d'acceuil{% endblock %}
 {% block body %}
     {# Header #}
-    <section>
+    <section class="animate__animated animate__fadeInLeft">
         <img src='{{ asset('/img/profil.jpg') }}'/>
             <span>
                 <hr>
             </span>
-        <div>
-            <h1>Dimitri Klopfstein</h1>
+        <div >
+            <h1 >Dimitri Klopfstein</h1>
             <h3>développeur web et mobile</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tempor nibh. Sed et elementum mi. Etiam mattis faucibus mi et consequat. Vivamus at elementum diam. Nunc dignissim sodales purus ut egestas. Cras pulvinar mauris nec nisi pulvinar, et laoreet ligula cursus. Proin quis nulla ut leo consectetur posuere. Maecenas ac consequat sapien, quis rhoncus ipsum. Vivamus mattis iaculis volutpat. Duis euismod pharetra felis, id finibus arcu tempus vel. Nam vel semper libero. Pellentesque consequat viverra velit, vitae congue odio consectetur quis. Nunc venenatis neque nec leo laoreet semper. Phasellus rhoncus quam nec ex aliquam laoreet. Integer at diam bibendum, laoreet eros sed, consectetur lectus.</p>
         </div>
@@ -19,7 +19,7 @@
         <img src='{{ asset('/img/icon-arrow.png') }}'/>
     </div>
    {# Aperçu projets#}
-    <section>   
+    <section data-aos="fade-right" >   
         <div class="home_projects">
             <hr/>
             <div class="title_h2">
@@ -34,8 +34,8 @@
         </div>
     </section>
    {# Invitation page Contact #}
-    <section>   
-        <div class="intro_contact">
+    <section data-aos="fade-left"  >   
+        <div   class="intro_contact">
             <hr/>
             <div class="title_h2 title_contact" >
                 <h2>Ça vous à plus ?</h2>
