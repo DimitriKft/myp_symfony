@@ -9,7 +9,7 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    {# <h1>Hello {{ controller_name }}! ✅</h1> #}
 
     This friendly message is coming from:
     <ul>
@@ -17,4 +17,5 @@
         <li>Your template at <code><a href="{{ '/home/dimitri/Bureau/myp_symfony/templates/contact/index.html.twig'|file_link(0) }}">templates/contact/index.html.twig</a></code></li>
     </ul>
 </div>
+{{ form(contactForm) }}
 {% endblock %}
