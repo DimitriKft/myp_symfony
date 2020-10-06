@@ -23,23 +23,23 @@
         </div>
     </div>
 
-    <div class="form">
-        <div>
-            <span>
-                <label style="margin-right:40px;">NOM :</label>
-                <input type="text"/>
-            </span>
-            <span>
-                <label style="margin-right:30px;">EMAIL :</label>
-                <input type="text"/>
-            </span>
-            <span>
-                <label style="margin-right:4px;">MESSAGE :</label>
-                <textarea></textarea>
-            </span>
-            <button class="form_button">Envoyer</button>
-        </div>
+   
+    {{ form_start(form) }}
+    <div>
+        <span>
+            {{ form_row(form.nom, {"attr": {'style':'margin-right:40px;'},"label":"NOM"}) }}
+        </span>
+        <span>
+            {{ form_row(form.prenom, {"attr": {'style':'margin-right:40px;'},"label":"PRÉNOM"}) }}
+        </span>
+        <span>
+            {{ form_row(form.email, {"attr": {'style':'margin-right:30px;'},"label":"EMAIL"}) }}
+        </span>
+        <span>
+            {{ form_row(form.message, {"attr": {'style':'margin:4px;'},"label":"MESSAGE"}) }}
+        </span>
     </div>
+    {{ form_end(form) }}
 
 </section>
 
