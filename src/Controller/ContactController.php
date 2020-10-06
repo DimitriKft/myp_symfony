@@ -24,7 +24,7 @@ class ContactController extends AbstractController
             //Ici on envoi le mail 
             $message = (new \Swift_Message('Nouveau Contact'))
                 // On attribue l'expediteur du $message
-                ->setFrom($contact['Email'])
+                ->setFrom($contact['email'])
 
                 // On attribue le destinataire
                 ->setTo('sangodim@gmail.com')
@@ -46,7 +46,7 @@ class ContactController extends AbstractController
 
 
         return $this->render('contact/index.html.twig', [
-            'contactForm' => $form->createView()
+            'form' => $form->createView()
         ]);
     }
 }
