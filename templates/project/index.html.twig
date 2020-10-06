@@ -33,7 +33,7 @@
             <!-- <img style="" src="{{ project.image }}" alt=""> -->
             <img src="{{ vich_uploader_asset(project, 'imageFile') }}" alt="">
         <div class="projet_contents">
-            <p class="projet_name">{{ project.name }}</p>
+            <p class="projet_name">{{ project.name | u.truncate(20, '...') }}</p>
             <p class="projet_description">{{ project.description | u.truncate(110, '...') }}</p>
             {% for technology in project.technology %}
                 {{ technology.name }}
