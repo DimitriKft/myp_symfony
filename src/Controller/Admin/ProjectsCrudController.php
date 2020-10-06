@@ -12,6 +12,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class ProjectsCrudController extends AbstractCrudController
 {
@@ -25,7 +26,9 @@ class ProjectsCrudController extends AbstractCrudController
         return [
             TextField::new('name'),
             TextareaField::new('description'),
-            TextField::new('image'),
+            ImageField::new('imageFile')
+                ->setFormType(VichImageType::class)
+                ->setLabel('Image'),
             TextField::new('repo_url'),
             TextField::new('website_url'),
             DateField::new('createdat'),

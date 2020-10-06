@@ -6,9 +6,12 @@ use App\Repository\ProjectsRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=ProjectsRepository::class)
+ * @Vich\Uploadable
  */
 class Projects
 {
@@ -30,9 +33,21 @@ class Projects
     private $description;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="project_images", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile;
+
+    /**
+     * @ORM\Column(type="datetime")
+     * @var \DateTime
+     */
+    private $updatedAt;
     
     /**
      * @ORM\ManyToMany(targetEntity=Technologies::class, inversedBy="technologies")
@@ -98,11 +113,32 @@ class Projects
         return $this->image;
     }
 
-    public function setImage(string $image): self
+    public function setImage( ?string $image): self
     {
         $this->image = $image;
 
         return $this;
+    }
+
+
+    /**
+     * @return File|null
+     */
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * @param File|null $imageFile
+     */
+    public function setImageFile(?File $imageFile = null)
+    {
+        $this->imageFile = $imageFile;
+
+        if (null !== $imageFile) {
+            $this->updatedAt = new \Datetime();
+        }
     }
 
 
@@ -145,6 +181,24 @@ class Projects
     {
         $this->createdat = $createdat;
 
+        return $this;
+    }
+
+       /**
+     * @return \DateTimeInterface|null
+     */
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * @param \DateTimeInterface|null $updatedAt
+     * @return $this
+     */
+    public function setUpdated(?\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
         return $this;
     }
 
