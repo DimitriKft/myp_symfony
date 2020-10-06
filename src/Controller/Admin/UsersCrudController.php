@@ -9,6 +9,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\ArrayField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 
 class UsersCrudController extends AbstractCrudController
 {
@@ -24,6 +25,9 @@ class UsersCrudController extends AbstractCrudController
             TextField::new('first_name'),
             TextField::new('email'),
             TextField::new('password'),
+            IntegerField::new('phone'),
+            TextField::new('linkedin'),
+            TextField::new('github'),
         ];
     }
 }

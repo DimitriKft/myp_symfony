@@ -3,9 +3,10 @@
 namespace App\Controller;
 
 use App\Entity\Projects;
+use App\Repository\UserRepository;
 use App\Repository\ProjectsRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ProjectController extends AbstractController
 {
@@ -23,11 +24,13 @@ class ProjectController extends AbstractController
      /**
      * @Route("/project/{id}", name="displayProject")
      */
-    public function alimentParType(Projects $project)
+    public function displayProject(Projects $project)
     {
         
         return $this->render('project/project.html.twig', [
             'project' => $project
         ]);
     }
+
+  
 }
