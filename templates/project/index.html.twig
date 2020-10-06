@@ -35,6 +35,9 @@
         <div class="projet_contents">
             <p class="projet_name">{{ project.name }}</p>
             <p class="projet_description">{{ project.description | u.truncate(110, '...') }}</p>
+            {% for technology in project.technology %}
+                {{ technology.name }}
+            {% endfor %} 
             <a class="projet_linkPage" href="{{ path('displayProject',{'id':project.id}) }}" >En savoir plus </a>
         </div>
     </div>

@@ -32,10 +32,11 @@
             <div class="singleProjet_tech">
                 <hr/>
                 <h3>Technologies</h3>
+                {% for technology in project.technology %}
                 <ul>
-                    <li>React JS</li>
-                    <li>Javascript</li>
+                    <li>{{ technology.name }}</li>
                 </ul>
+                {% endfor %} 
             </div>
         </div>
     <div class="back">
