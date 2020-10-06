@@ -51,6 +51,21 @@ class User implements UserInterface
      */
     private $projects;
 
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $phone;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $linkedin;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $github;
+
     public function __construct()
     {
         $this->projects = new ArrayCollection();
@@ -192,5 +207,41 @@ class User implements UserInterface
     public function __toString()
     {
         return $this->last_name;
+    }
+
+    public function getPhone(): ?int
+    {
+        return $this->phone;
+    }
+
+    public function setPhone(?int $phone): self
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    public function getLinkedin(): ?string
+    {
+        return $this->linkedin;
+    }
+
+    public function setLinkedin(?string $linkedin): self
+    {
+        $this->linkedin = $linkedin;
+
+        return $this;
+    }
+
+    public function getGithub(): ?string
+    {
+        return $this->github;
+    }
+
+    public function setGithub(?string $github): self
+    {
+        $this->github = $github;
+
+        return $this;
     }
 }
