@@ -28,7 +28,14 @@
             </div>
             <div class="section_project">
                 {% for project in projects %}
-                    <li>{{ project.name }}</li>
+                    <div class="box_project">
+                        <img style="" src="{{ project.image }}" alt="">
+                        <div class="projet_contents">
+                            <p class="projet_name">{{ project.name }}</p>
+                            <p class="projet_description">{{ project.description | u.truncate(110, '...') }}</p>
+                            <a class="projet_linkPage" href="{{ path('displayProject',{'id':project.id}) }}" >En savoir plus </a>
+                        </div>
+                    </div>
                 {% endfor %}
             </div>
         </div>
