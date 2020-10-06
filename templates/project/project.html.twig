@@ -14,7 +14,8 @@
 
 <section class="singleProjet_content">
     <div class="singleProjet">
-        <img  src="{{ project.image }}" alt=" aperçu projet {{ project.name }}">
+        <!-- <img  src="{{ project.image }}" alt=" aperçu projet {{ project.name }}"> -->
+        <img  src="{{ vich_uploader_asset(project, 'imageFile') }}" alt="">
         <div class="singleProjet_description">
             <hr />
             <h3>Concept</h3>

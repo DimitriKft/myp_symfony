@@ -29,7 +29,8 @@
             <div class="section_project">
                 {% for project in projects %}
                     <div class="box_project">
-                        <img style="" src="{{ vich_uploader_asset(project, 'imageFile') }}" alt="">
+                        <!-- <img style="" src="{{ project.image }}" alt=""> -->
+                        <img  src="{{ vich_uploader_asset(project, 'imageFile') }}" alt="">
                         <div class="projet_contents">
                             <p class="projet_name">{{ project.name }}</p>
                             <p class="projet_description">{{ project.description | u.truncate(110, '...') }}</p>
