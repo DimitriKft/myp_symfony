@@ -66,10 +66,6 @@ class User implements UserInterface
      */
     private $github;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $mail;
 
     public function __construct()
     {
@@ -250,15 +246,4 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getMail(): ?string
-    {
-        return $this->mail;
-    }
-
-    public function setMail(string $mail): self
-    {
-        $this->mail = $mail;
-
-        return $this;
-    }
 }
