@@ -13,24 +13,26 @@ class ProjectController extends AbstractController
     /**
      * @Route("/project", name="projects")
      */
-    public function index(ProjectsRepository $repo)
+    public function index(ProjectsRepository $repo,  UserRepository $userRepository)
     {
         $projects = $repo->findAll();
+        $users    = $userRepository->findAll();
         return $this->render('project/index.html.twig', [
-            'projects' => $projects
+            'projects' => $projects,
+            'users'    => $users 
         ]);
     }
 
      /**
      * @Route("/project/{id}", name="displayProject")
      */
-    public function displayProject(Projects $project)
+    public function displayProject(Projects $project,  UserRepository $userRepository)
     {
-        
+        $users    = $userRepository->findAll();
         return $this->render('project/project.html.twig', [
-            'project' => $project
+            'project' => $project,
+            'users'    => $users 
         ]);
     }
 
-  
 }
