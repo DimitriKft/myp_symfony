@@ -24,6 +24,7 @@
         "symfony/http-client": "5.1.*",
         "symfony/intl": "5.1.*",
         "symfony/mailer": "5.1.*",
+        "symfony/maker-bundle": "^1.21",
         "symfony/mime": "5.1.*",
         "symfony/monolog-bundle": "^3.1",
         "symfony/notifier": "5.1.*",
@@ -51,7 +52,6 @@
         "symfony/browser-kit": "^5.1",
         "symfony/css-selector": "^5.1",
         "symfony/debug-bundle": "^5.1",
-        "symfony/maker-bundle": "^1.0",
         "symfony/phpunit-bridge": "^5.1",
         "symfony/var-dumper": "^5.1"
     },
