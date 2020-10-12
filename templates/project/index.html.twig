@@ -3,47 +3,46 @@
 {% block title %}Hello ProjectController!{% endblock %}
 
 {% block body %}
+    <div class="titles">
+    <hr class="project"/>
+        <div class="title_h2">
+            <h2>Mes projets</h2>
+            <span>Mes projets</span>
+        </div>       
+    </div>
 
-<div class="titles">
- <hr class="project"/>
-    <div class="title_h2">
-        <h2>Mes projets</h2>
-        <span>Mes projets</span>
-    </div>       
-</div>
+    <section class="filter">
+        <span>
+            <label for="pet-select">Triez par :</label>
 
-<section class="filter">
-    <span>
-        <label for="pet-select">Triez par :</label>
+            <select name="pets" id="pet-select">
+                <option value="">--Choisir une technologie--</option>
+                <option value="dog">React</option>
+                <option value="cat">Wordpress</option>
+                <option value="hamster">Tous</option>
+            </select>
+            <button>Rechercher</button>
+        </span>
+    </section>
 
-        <select name="pets" id="pet-select">
-            <option value="">--Choisir une technologie--</option>
-            <option value="dog">React</option>
-            <option value="cat">Wordpress</option>
-            <option value="hamster">Tous</option>
-        </select>
-        <button>Rechercher</button>
-    </span>
-</section>
-
-<section class="all_projects">
-{% for project in projects %}
-    <div class="box_project">
-        
-            <!-- <img style="" src="{{ project.image }}" alt=""> -->
+    <section class="all_projects">
+    {% for project in projects %}
+        {% if loop.index is divisible by(2) %}
+        <div class="box_project_first">       
+        {% else %}
+        <div class="box_project">      
+        {% endif %}
             <img src="{{ vich_uploader_asset(project, 'imageFile') }}" alt="">
             <div class="projet_contents">
             <p class="projet_name">{{ project.name | u.truncate(20, '...') }}</p>
             <p class="projet_description">{{ project.description | u.truncate(110, '...') }}</p>
-            {% for technology in project.technology %}
-                {{ technology.name }}
-            {% endfor %} 
-            <a class="projet_linkPage" href="{{ path('displayProject',{'id':project.id}) }}" >En savoir plus </a>
+        {% for technology in project.technology %}
+            {{ technology.name }}
+        {% endfor %} 
+        <a class="projet_linkPage" href="{{ path('displayProject',{'id':project.id}) }}" >En savoir plus </a>
+            </div>
         </div>
-    </div>
-{% endfor %}
-
-
-</section>
-
+    {% endfor %}
+    </section>
+    
 {% endblock %}

@@ -17,10 +17,12 @@
 <section class="content_contact">
     <div class="information">
         <p>Pour une question où juste envie <br/> d'une discution</p>
-        <div>
-            <span><ion-icon name="mail-outline" class="icon_contact"></ion-icon>john.smith@gmail.com</span>
-            <span><ion-icon name="call-outline" class="icon_contact phone"></ion-icon>01 02 03 04 11 33</span>
-        </div>
+        {% for user in users %}
+            <div>
+                <span><ion-icon name="mail-outline" class="icon_contact"></ion-icon>{{ user.email }}</span>
+                <span><ion-icon name="call-outline" class="icon_contact phone"></ion-icon>{{ user.phone }}</span>
+            </div>
+        {% endfor %}
     </div>
 
    
