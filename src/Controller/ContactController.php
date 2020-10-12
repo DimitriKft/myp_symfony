@@ -3,17 +3,20 @@
 namespace App\Controller;
 
 use App\Form\ContactType;
+use App\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ContactController extends AbstractController
+
 {
     /**
      * @Route("/contact", name="contact")
      */
-    public function index(Request $request, \Swift_Mailer $mailer)
+    public function index(Request $request, \Swift_Mailer $mailer, UserRepository $userRepository)
     {
+        $users    = $userRepository->findAll(); 
         $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
 
@@ -46,7 +49,8 @@ class ContactController extends AbstractController
 
 
         return $this->render('contact/index.html.twig', [
-            'form' => $form->createView()
+            'form' => $form->createView(),
+            'users'    => $users 
         ]);
     }
 }

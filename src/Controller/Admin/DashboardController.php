@@ -29,7 +29,8 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Make Your Portfolio');
+            ->setTitle('<a href="/" style="color:blue;">Retour portfolio</a>');
+        
     }
 
     

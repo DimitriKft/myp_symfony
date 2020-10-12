@@ -25,11 +25,13 @@
                 <span class="circle">J</span>
                 <span><p>Abdellah Skoundri</p></span>
             </div>
-            </a>    
+            </a>
+            {% for user in users %}
             <div class="link">
-                <div class='item_logo'> <a href="#"><img src='{{ asset('img/Icon-linkedin.png') }}'/><span>Linkedin</span></a></div>
-                <div class='item_logo'> <a href="#"><img src='{{ asset('img/Icon-github.png') }}'/><span>Github</span></a></div>
+                <div class='item_logo'> <a href="{{ user.linkedin }}"><img src='{{ asset('img/Icon-linkedin.png') }}'/><span>Linkedin</span></a></div>
+                <div class='item_logo'> <a href="{{ user.github }}"><img src='{{ asset('img/Icon-github.png') }}'/><span>Github</span></a></div>
             </div>
+            {% endfor %}
         </header>
         <nav>
             <ul>
@@ -51,10 +53,12 @@
                 <span><p>Abdellah Skoundri</p></span>
             </div>
             </a>    
+            {% for user in users %}
             <div class="link">
-                <div class='item_logo'> <a href="#"><img src='{{ asset('img/Icon-linkedin.png') }}'/></a></div>
-                <div class='item_logo'> <a href="#"><img src='{{ asset('img/Icon-github.png') }}'/></a></div>
+                <div class='item_logo'> <a href="{{ user.linkedin }}"><img src='{{ asset('img/Icon-linkedin.png') }}'/></a></div>
+                <div class='item_logo'> <a href="{{ user.github }}"><img src='{{ asset('img/Icon-github.png') }}'/></a></div>
             </div>
+            {% endfor %}
 
             <div>
             <ul>
