@@ -3,7 +3,7 @@
 {% block body %}
     {# Header #}
     <section class="animate__animated animate__fadeInLeft">
-        <img src='{{ asset('/img/profil.jpg') }}'/>
+        <img class="profil_picture" src='{{ asset('/img/profil.jpg') }}'/>
             <span>
                 <hr>
             </span>
@@ -16,45 +16,78 @@
 
     <div class="view_project">
         <span>voir les projets</span>
-        <img src='{{ asset('/img/icon-arrow.png') }}'/>
+        <img  src='{{ asset('/img/icon-arrow.png') }}'/>
     </div>
+
    {# Aperçu projets#}
-    <section data-aos="fade-right" >   
+    <section>   
+    <div class="projets_all">
         <div class="home_projects">
             <hr/>
             <div class="title_h2">
                 <h2>Work work work ...</h2>
                 <span>Work work work ...</span>
             </div>
-            <div class="section_project">          
-                {% for project in projects %}
-                    {% if loop.first %}
-                        <div class="box_project_first">    
-                            First    
-                    {% elseif loop.last %}
-                        <div class="box_project_last">   
-                            Last     
-                    {% else %}
-                        <div class="box_project">        
-                    {% endif %}
-                        <img src="{{ vich_uploader_asset(project, 'imageFile') }}" alt="">
-                        <div class="projet_contents">
-                        <p class="projet_name">{{ project.name | u.truncate(20, '...') }}</p>
-                        <p class="projet_description">{{ project.description | u.truncate(110, '...') }}</p>
-                        <a class="projet_linkPage" href="{{ path('displayProject',{'id':project.id}) }}" >En savoir plus </a>
-                    {% for technology in project.technology %}
-                        {{ technology.name }}
-                    {% endfor %} 
+        </div>    
+        <div class="box">
+            <div class='box1'>
+                <div class="projet projet1 image">
+                    <img src='{{ asset('/img/project.jpg') }}'/>
+                     <div class="image__title">
+                        <p>ProjetName</p>
                     </div>
-                {% endfor %}
-
+                </div>
+                <div class="projet projet2 image">
+                     <img src='{{ asset('/img/project.jpg') }}'/>
+                    <div class="image__title">
+                        <p>ProjetName</p>
+                    </div>
+                </div>
             </div>
+            <div class='box2'>
+                <div class="all_project">
+                    <p>En voir plus </p>
+                </div>
+                <div class="projet projet3 image">
+                     <img src='{{ asset('/img/profil.jpg') }}'/>
+
+                    <div class="image__title">
+                        <p>ProjetName</p>
+                    </div>
+                </div>
         </div>
+      </div>  
     </section>
+    <section>
+                        <div class="section_project">          
+                            {% for project in projects %}
+                                {% if loop.first %}
+                                    <div class="box_project_first">    
+                                        First    
+                                {% elseif loop.last %}
+                                    <div class="box_project_last">   
+                                        Last     
+                                {% else %}
+                                    <div class="box_project">        
+                                {% endif %}
+                                    <img src="{{ vich_uploader_asset(project, 'imageFile') }}" alt="">
+                                    <div class="projet_contents">
+                                    <p class="projet_name">{{ project.name | u.truncate(20, '...') }}</p>
+                                    <p class="projet_description">{{ project.description | u.truncate(110, '...') }}</p>
+                                    <a class="projet_linkPage" href="{{ path('displayProject',{'id':project.id}) }}" >En savoir plus </a>
+                                {% for technology in project.technology %}
+                                    {{ technology.name }}
+                                {% endfor %} 
+                                </div>
+                        </div>
+                            {% endfor %}
+          
+  
+</section>
    {# Invitation page Contact #}
-    <section data-aos="fade-left"  >   
-        <div   class="intro_contact">
-            <hr/>
+    <section>   
+        <div class="intro_contact">
+            {# <hr/> #}
             <div class="title_h2 title_contact" >
                 <h2>Ça vous à plus?</h2>
                 <span>Ça vous à plus?</span>

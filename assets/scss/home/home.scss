@@ -3,10 +3,12 @@
 
 // -> PAGE ACCUEIL
 .container {
-    width: 67%;
+    // border:2px solid rebeccapurple;
+    // width: 80%;
     position: relative;
     z-index: 3;
     margin-top: 1%;
+    margin-left: 15%;
     @media #{$medium-up}{ margin-left:20%;}
     // Header
     section {
@@ -18,7 +20,7 @@
             justify-content: center;
             align-items: center;
         }
-        img{
+        .profil_picture{
             height: 550px;
             width: auto;
             border-radius: 13px;
@@ -38,11 +40,12 @@
             }
         }
         div{
-            width: auto;
+            // width: 50%;
             display: flex;
             justify-content: start;
             flex-direction: column;
             margin-left: 2%;
+            // border:2px solid red;
             @media #{$medium-up}{ 
                 width: auto;
                 text-align: center;
@@ -67,15 +70,108 @@
     }
     // Projet
     section{
-        .home_projects, .intro_contact{
-            margin-top: 25%;
-            margin-left: 10%;
-            hr{
-                margin-bottom: 4% !important;
-                position: absolute;
-                margin-left: -90px;
-                @media #{$medium-up}{margin-left: -65px;}
+        .projets_all{
+            flex-direction: column;
+            // border:3px solid royalblue;
+            width: 100%;
+            margin-bottom: 10%;
+        
+            .home_projects{
+                margin-top: 15%;
+                margin-left: 10%;
+                // border:4px solid red;
+                width: 900px;
+                hr{
+                    margin-bottom: 4% !important;
+                    position: absolute;
+                    margin-left: -90px;
+                    @media #{$medium-up}{margin-left: -65px;}
+                }
+                .title_h2{
+                    width: 130%;
+                    margin-bottom: 50px;
+                }  
+            
             }
+            .box{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                .box1,.box2{
+                    // border:2px solid yellow;
+                    width: auto;
+                    margin:5%;
+                    .image{
+                        position: relative;
+                        margin: 5%;
+                        background-size: cover;
+                        background-clip: content-box;
+                        border-radius: 20px;
+                        background-position: center center;
+                        overflow: hidden;
+                    }
+                    .image__title{
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        height: 100%;
+                        width: 100%;
+                        margin-left: 0;
+                        display: flex;
+                        justify-content: flex-end;
+                        background-color: $color_primary;
+                        opacity: 0;
+                        transition: all 0.4s ease 0s; 
+                        p{
+                            color: white;
+                            font-size: 1.5em;
+                            font-weight: 700;
+                            padding: 1em;
+                        }
+                    }
+                    .image:hover .image__title{
+                        opacity: 0.80;
+                    }                      
+                }
+                .box1{ justify-content: flex-end;}
+                .box2{ justify-content: center;align-items: center;}
+                .projet1{
+                    width: 440px;
+                    height: 285px;
+                    // border:2px solid darkblue;
+                   
+                }
+                .projet2{
+                    width: 350px;
+                    height: 240px;
+                    // border:2px solid orangered;
+                    margin-left: 29% !important;
+                }
+                .projet3{
+                    width: 265px;
+                    height: 350px;
+                    // border:2px solid darkgreen;
+                }
+                .all_project{
+                    width: 200px;
+                    height: 70px;
+                    background-color: $color_primary;
+                    padding: 1em;
+                    margin: 10%;
+                    border-radius: 12px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    p{
+                        color: white;
+                        font-size: 1.5em;
+                        font-weight: 700;
+                    }
+                }
+
+            }
+        }    
             .title_h2{width: 130%;}  
         }
         .box_project{
@@ -101,6 +197,7 @@
         .box_project_first{
             padding: 2em;
             width: 100%;
+            border:2px solid red;
             @media #{$medium-up}{
                 height: auto;
                 display: flex;
@@ -141,20 +238,28 @@
     }
     // Contact
      section{
-        .intro_contact{@media #{$medium-up}{margin-left: 5px;}
+        border:2px solid rebeccapurple;
+        .intro_contact{
+            // margin-top: 25%;
+            // margin-left: 10%;
+            border:2px solid springgreen;
+            width: 100%;
+           
+          
+            @media #{$medium-up}{margin-left: 5px;}
              hr{
                 margin-left: 250px;
                 @media #{$medium-up}{margin-left: -40px;}
             }
             .title_contact{
-                // border:2px solid red;
-                width: 80%;
-                margin-left: 45% ; 
+                border:2px solid red;
+                // width: 80%;
+                margin-left: 50% ; 
                 @media #{$medium-up}{margin-left:5%;}
             }
         } 
         .intro_contact-text{
-            font-size: 1.5em;
+            font-size: 2.5em;
             font-weight:600 ;
             margin-top: 7%;
             text-align: center;
@@ -163,7 +268,7 @@
             @media #{$medium-up}{margin:25%;}
         }
     }
-}
+
 
 
 
