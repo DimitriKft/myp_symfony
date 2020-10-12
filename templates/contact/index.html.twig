@@ -24,8 +24,9 @@
     </div>
 
    
+    <div class="section-form">
+    <div class="form">
     {{ form_start(form) }}
-    <div>
         <span>
             {{ form_row(form.nom, {"attr": {'style':'margin-right:40px;'},"label":"NOM"}) }}
         </span>
@@ -38,8 +39,9 @@
         <span>
             {{ form_row(form.message, {"attr": {'style':'margin:4px;'},"label":"MESSAGE"}) }}
         </span>
-    </div>
     {{ form_end(form) }}
+    </div>
+    </div>
 
 </section>
 

@@ -25,6 +25,7 @@ class ProjectFixtures extends Fixture
             $project->setRepoUrl($faker->url);
             $project->setWebsiteUrl($faker->url);
             $project->setCreatedat($faker->dateTime($max = 'now', $timezone = null));
+            $project->setUpdated($faker->dateTime($max = 'now', $timezone = null));
             $manager->persist($project);
         }
 
