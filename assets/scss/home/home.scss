@@ -4,7 +4,7 @@
 // -> PAGE ACCUEIL
 .container {
     // border:2px solid rebeccapurple;
-     width: 80%;
+    // width: 80%;
     position: relative;
     z-index: 3;
     margin-top: 1%;
@@ -40,11 +40,12 @@
             }
         }
         div{
-            width: auto;
+            // width: 50%;
             display: flex;
             justify-content: start;
             flex-direction: column;
             margin-left: 2%;
+            // border:2px solid red;
             @media #{$medium-up}{ 
                 width: auto;
                 text-align: center;
@@ -237,10 +238,12 @@
     }
     // Contact
      section{
+        border:2px solid rebeccapurple;
         .intro_contact{
             // margin-top: 25%;
-            margin-left: 10%;
-            
+            // margin-left: 10%;
+            border:2px solid springgreen;
+            width: 100%;
            
           
             @media #{$medium-up}{margin-left: 5px;}
@@ -249,14 +252,14 @@
                 @media #{$medium-up}{margin-left: -40px;}
             }
             .title_contact{
-                // border:2px solid red;
-                width: 80%;
-                margin-left: 45% ; 
+                border:2px solid red;
+                // width: 80%;
+                margin-left: 50% ; 
                 @media #{$medium-up}{margin-left:5%;}
             }
         } 
         .intro_contact-text{
-            font-size: 1.5em;
+            font-size: 2.5em;
             font-weight:600 ;
             margin-top: 7%;
             text-align: center;
