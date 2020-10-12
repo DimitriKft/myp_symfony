@@ -4,10 +4,11 @@
 // -> PAGE ACCUEIL
 .container {
     // border:2px solid rebeccapurple;
-    // width: 67%;
+     width: 80%;
     position: relative;
     z-index: 3;
     margin-top: 1%;
+    margin-left: 15%;
     @media #{$medium-up}{ margin-left:20%;}
     // Header
     section {
