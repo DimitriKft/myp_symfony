@@ -59,27 +59,20 @@
       </div>  
     </section>
     <section>
-                        <div class="section_project">          
-                            {% for project in projects %}
-                                {% if loop.first %}
-                                <div class="block1" style="background-color: red;">                             
-                                    <div>
-                                         BLOCK1
-                                    </div>
-                                {% elseif loop.last %}
-                                    <div>
-                                         BLOCK1
-                                    </div>
-                                </div>
-                                {% else %}
-                                <div class="block2" style="background-color: blue;">
-                                    <div>
-                                         BLOCK2
-                                    </div>  
-                                </div>
-                                {% endif %}
-                             
-                            {% endfor %}
+    <div class="section_project">  
+        
+        {% for projet in project1 %}
+            {{ projet.name }}
+        {% endfor %}
+
+        {% for projet in project2 %}
+            {{ projet.name }}
+        {% endfor %}
+
+        {% for projet in project3 %}
+        {{ projet.name }}
+        {% endfor %}
+                            
 </section>
    {# Invitation page Contact #}
     <section>   

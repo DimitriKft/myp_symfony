@@ -14,10 +14,14 @@ class HomeController extends AbstractController
      */
     public function index(ProjectsRepository $projectsRepository,  UserRepository $userRepository)
     {
-        $projects = $projectsRepository->findBy(array(),array('id'=>'DESC'),3,0); 
+        $project1 = $projectsRepository->findBy(array(),array('id'=>'DESC'),1,0); 
+        $project2 = $projectsRepository->findBy(array(),array('id'=>'DESC'),1,1); 
+        $project3 = $projectsRepository->findBy(array(),array('id'=>'DESC'),1,2); 
         $users    = $userRepository->findAll(); 
         return $this->render('home/index.html.twig', [
-            'projects' => $projects,
+            'project1' => $project1,
+            'project2' => $project2,
+            'project3' => $project3,
             'users'    => $users 
         ]);
     }
