@@ -3,32 +3,20 @@
 {% block title %}Hello ProjectController!{% endblock %}
 
 {% block body %}
+<section>
     <div class="titles">
-    <hr class="project"/>
+        <hr class=""/>
         <div class="title_h2">
             <h2>Mes projets</h2>
             <span>Mes projets</span>
         </div>       
     </div>
 
-    <section class="filter">
-        <span>
-            <label for="pet-select">Triez par :</label>
+    <div class="all_projects"> 
 
-            <select name="pets" id="pet-select">
-                <option value="">--Choisir une technologie--</option>
-                <option value="dog">React</option>
-                <option value="cat">Wordpress</option>
-                <option value="hamster">Tous</option>
-            </select>
-            <button>Rechercher</button>
-        </span>
-    </section>
-
-    <section class="all_projects">
     {% for project in projects %}
         {% if loop.index is divisible by(2) %}
-        <div class="box_project_first">       
+        <div class="box_project right" >       
         {% else %}
         <div class="box_project">      
         {% endif %}
@@ -43,6 +31,7 @@
             </div>
         </div>
     {% endfor %}
+    </div>
     </section>
     
 {% endblock %}
