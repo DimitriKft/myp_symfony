@@ -3,15 +3,17 @@
 
 // -> PAGE ACCUEIL
 .container {
-    // border:2px solid rebeccapurple;
-    // width: 80%;
+    border:2px solid rebeccapurple;
+    width: 80%;
     position: relative;
     z-index: 3;
     margin-top: 1%;
-    margin-left: 15%;
-    @media #{$medium-up}{ margin-left:20%;}
+    margin-left: 17%;
+    @media #{$medium-up}{ 
+        margin-left:none;
+    }
     // Header
-    section {
+    .header{
         display: flex;
         align-items: center;
         @media #{$medium-up}{ 
@@ -31,11 +33,11 @@
                 width: 250px !important;  
             }
         }
-        hr{
-            margin-bottom: 450%;
+        .hr_title{
+            margin-top: -50%;
             @media #{$medium-up}{ 
                 position: absolute;
-                margin-top: 15%;
+                margin-top: 5%;
                 margin-left: -180px;
             }
         }
@@ -76,29 +78,14 @@
             width: 100%;
             margin-bottom: 10%;
         
-            .home_projects{
-                margin-top: 15%;
-                margin-left: 10%;
-                // border:4px solid red;
-                width: 900px;
-                hr{
-                    margin-bottom: 4% !important;
-                    position: absolute;
-                    margin-left: -90px;
-                    @media #{$medium-up}{margin-left: -65px;}
-                }
-                .title_h2{
-                    width: 130%;
-                    margin-bottom: 50px;
-                }  
             
-            }
             .box{
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
+                border:2px solid brown;
                 .box1,.box2{
-                    // border:2px solid yellow;
+                    border:2px solid yellow;
                     width: auto;
                     margin:5%;
                     .image{
@@ -238,12 +225,12 @@
     }
     // Contact
      section{
-        border:2px solid rebeccapurple;
+        // border:2px solid rebeccapurple;
         .intro_contact{
             // margin-top: 25%;
             // margin-left: 10%;
             border:2px solid springgreen;
-            width: 100%;
+            // width: 100%;
            
           
             @media #{$medium-up}{margin-left: 5px;}
@@ -254,7 +241,7 @@
             .title_contact{
                 border:2px solid red;
                 // width: 80%;
-                margin-left: 50% ; 
+                // margin-left: 50% ; 
                 @media #{$medium-up}{margin-left:5%;}
             }
         } 

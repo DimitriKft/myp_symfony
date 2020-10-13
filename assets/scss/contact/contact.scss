@@ -2,7 +2,7 @@
 
 // -> PAGE CONTACT 
 .content_contact{
-    // border:2px solid rebeccapurple;
+    border:2px solid rebeccapurple;
     display: flex;
     justify-content: space-around;
     // height: 90%;
@@ -10,7 +10,8 @@
     margin-left: 10%;
     @media #{$medium-up}{
         flex-direction: column;
-        width: 110%;
+        width: auto;
+        // margin-left: -25%;
     }
     .information{
         // border:2px solid royalblue;
@@ -89,8 +90,8 @@
                 height: auto;
                 padding-right: none;
                 padding: none;
-                justify-content: flex-start;
-                align-items: flex-start;
+                justify-content: center;
+                align-items: flex-center;
             }
             
             input, textarea{
@@ -98,7 +99,7 @@
                 align-items: flex-end;
                 margin-bottom: 15px;
                 @media #{$medium-up}{
-                    width: 70%;
+                    width: 100%;
                     
                 }
                 

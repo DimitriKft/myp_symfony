@@ -1,17 +1,7 @@
 // Page afichage projet unique
 @import "../variables.scss";
 
-.titles{
-    margin-top: 5%;
-    .project{
-        margin-bottom: -4%;
-        margin-left: 2.5%;
-        @media #{$medium-up}{
-            margin-bottom: -10%;
-            margin-left: -15%;
-        }
-    }
-}
+
 .singleProjet_content{
     width: 100%;
     padding: 1em;
