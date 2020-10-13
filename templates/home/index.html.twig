@@ -62,27 +62,24 @@
                         <div class="section_project">          
                             {% for project in projects %}
                                 {% if loop.first %}
-                                    <div class="box_project_first">    
-                                        First    
+                                <div class="block1" style="background-color: red;">                             
+                                    <div>
+                                         BLOCK1
+                                    </div>
                                 {% elseif loop.last %}
-                                    <div class="box_project_last">   
-                                        Last     
-                                {% else %}
-                                    <div class="box_project">        
-                                {% endif %}
-                                    <img src="{{ vich_uploader_asset(project, 'imageFile') }}" alt="">
-                                    <div class="projet_contents">
-                                    <p class="projet_name">{{ project.name | u.truncate(20, '...') }}</p>
-                                    <p class="projet_description">{{ project.description | u.truncate(110, '...') }}</p>
-                                    <a class="projet_linkPage" href="{{ path('displayProject',{'id':project.id}) }}" >En savoir plus </a>
-                                {% for technology in project.technology %}
-                                    {{ technology.name }}
-                                {% endfor %} 
+                                    <div>
+                                         BLOCK1
+                                    </div>
                                 </div>
-                        </div>
+                                {% else %}
+                                <div class="block2" style="background-color: blue;">
+                                    <div>
+                                         BLOCK2
+                                    </div>  
+                                </div>
+                                {% endif %}
+                             
                             {% endfor %}
-          
-  
 </section>
    {# Invitation page Contact #}
     <section>   
