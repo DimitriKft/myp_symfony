@@ -24,7 +24,7 @@ Ensuite, dans l'ordre taper les commandes dans votre terminal :
 
 - 3 ``yarn install``     afin d'installer toutes les dépendances yarn du projet.
 
-- 4 ``composer updated`` nécessaire pour que composer installe certaine dépendance.
+- 4 ``composer update`` nécessaire pour que composer installe certaine dépendance.
 
 - 4 installer la base de donnée MySQL :                                              ``symfony console doctrine:database:create``
 
