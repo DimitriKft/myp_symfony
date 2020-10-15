@@ -74,12 +74,14 @@
         margin-top: -10%;
         writing-mode: vertical-rl;
         text-orientation: mixed;
+        vertical-align: top;
         @media #{$medium-up}{display: none;}
         span{
             text-transform: uppercase;
             font-size: small;
             color:$color_primary;
             font-weight: normal;
+           
         }
     }
     // Projet
