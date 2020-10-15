@@ -91,7 +91,7 @@ Bundle utilisé dans le projet :
 **Version** 0.0.1
 
 ## Auteurs
-* **Caroline chatelon** _alias_  [@Rocalinecht](https://github.com/Rocalinecht)
+* **Caroline Chatelon** _alias_  [@Rocalinecht](https://github.com/Rocalinecht)
 * **Abdellah Skoundri** _alias_  [@Abdellah-SK](https://github.com/Abdellah-Sk)
 * **Dimitri Klopfstein** _alias_ [@DimitriKft](https://github.com/DimitriKft)
 
