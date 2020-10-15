@@ -174,34 +174,22 @@
     }
     // Contact
      section{
-        // border:2px solid rebeccapurple;
+        .title-contact{
+            margin-left: 40%;
+        }
         .intro_contact{
-            // margin-top: 25%;
-            // margin-left: 10%;
-            border:2px solid springgreen;
-            // width: 100%;
-           
-          
-            @media #{$medium-up}{margin-left: 5px;}
-             hr{
-                margin-left: 250px;
-                @media #{$medium-up}{margin-left: -40px;}
-            }
-            .title_contact{
-                border:2px solid red;
-                // width: 80%;
-                // margin-left: 50% ; 
-                @media #{$medium-up}{margin-left:5%;}
-            }
-        } 
-        .intro_contact-text{
-            font-size: 2.5em;
-            font-weight:600 ;
-            margin-top: 7%;
+            // border:2px solid rebeccapurple;
+            margin: 10% 5%;
             text-align: center;
-            width: 70%;
-            margin: 15%;
-            @media #{$medium-up}{margin:25%;}
+            padding: 1em;
+            p{
+                font-size: 1.5em;
+                font-weight: 700;
+                span:hover{
+                    text-decoration: underline;
+                    color: $color_primary;
+                }
+            }
         }
     }
 
