@@ -6,7 +6,10 @@
 
 
 
-<div class="titles">
+<div class="titles"
+     data-aos="fade-right" 
+     data-aos-duration="1000"
+     data-aos-easing="ease-in-sine">
  <hr class="project"/>
     <div class="title_h2">
         <h2>Contact</h2>
@@ -23,28 +26,24 @@
                 <span><ion-icon name="call-outline" class="icon_contact phone"></ion-icon>{{ user.phone }}</span>
             </div>
         {% endfor %}
-    </div>
-
-   
+    </div>   
     <div class="section-form">
-    <div class="form">
-    {{ form_start(form) }}
-        <span>
-            {{ form_row(form.nom, {"label":"NOM"}) }}
-        </span>
-        <span>
-            {{ form_row(form.prenom, {"attr": {'style':'margin-right:40px;'},"label":"PRÉNOM"}) }}
-        </span>
-        <span>
-            {{ form_row(form.email, {"attr": {'style':'margin-right:30px;'},"label":"EMAIL"}) }}
-        </span>
-        <span>
-            {{ form_row(form.message, {"attr": {'style':'margin:4px;'},"label":"MESSAGE"}) }}
-        </span>
-    {{ form_end(form) }}
+        <div class="form">
+        {{ form_start(form) }}
+            <span>
+                {{ form_row(form.nom, {"label":"NOM"}) }}
+            </span>
+            <span>
+                {{ form_row(form.prenom, {"label":"PRÉNOM"}) }}
+            </span>
+            <span>
+                {{ form_row(form.email, {"label":"EMAIL"}) }}
+            </span>
+            <span>
+                {{ form_row(form.message, {"label":"MESSAGE"}) }}
+            </span>
+        {{ form_end(form) }}
+        </div>
     </div>
-    </div>
-
 </section>
-
 {% endblock %}

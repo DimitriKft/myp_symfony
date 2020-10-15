@@ -83,4 +83,16 @@ section{
             }
         }
     }
+    .pagination{
+        // border:3px solid red;
+        width: 10%;
+        margin-left: 35%;
+        margin-bottom: 10%;
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+        @media #{$medium-up}{
+            margin-left: 45%;
+        }
+    }
 }    

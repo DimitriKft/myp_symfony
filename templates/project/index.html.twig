@@ -4,7 +4,10 @@
 
 {% block body %}
 <section>
-    <div class="titles">
+    <div class="titles"
+         data-aos="fade-right" 
+         data-aos-duration="1000"
+         data-aos-easing="ease-in-sine">
         <hr class=""/>
         <div class="title_h2">
             <h2>Mes projets</h2>
@@ -33,8 +36,10 @@
             </div>
         </div>
     {% endfor %}
+        <div class="pagination">
+            {{ knp_pagination_render(projects) }}
+        </div>    
     </div>
-        {{ knp_pagination_render(projects) }}
     </section>
     
 {% endblock %}

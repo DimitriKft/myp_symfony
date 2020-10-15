@@ -14,6 +14,8 @@
     }
     // Header
     .header{
+        // border:2px solid rebeccapurple;
+
         display: flex;
         align-items: center;
         @media #{$medium-up}{ 
@@ -23,6 +25,8 @@
             align-items: center;
         }
         .profil_picture{
+        // border:2px solid rebeccapurple;
+
             height: 550px;
             width: auto;
             border-radius: 13px;
@@ -33,27 +37,35 @@
                 width: 250px !important;  
             }
         }
-        .hr_title{
-            margin-top: -50%;
-            @media #{$medium-up}{ 
-                position: absolute;
-                margin-top: 5%;
-                margin-left: -180px;
+        span{
+            border:2px solid transparent;
+            margin-bottom: 20%;
+            margin-right: 2%;
+            .hr_title{
+                margin-top: 35%;
+                @media #{$medium-up}{ 
+                    position: absolute;
+                    margin-top: 14%;
+                    margin-left: -7%;
+                }
             }
         }
         div{
-            // width: 50%;
+            width: 75%;
             display: flex;
             justify-content: start;
             flex-direction: column;
-            margin-left: 2%;
-            // border:2px solid red;
+            // margin-left: 2%;
             @media #{$medium-up}{ 
                 width: auto;
                 text-align: center;
                 margin-top: 7%;
             }
-            p{font-size: 0.75em;}
+            div{
+                // border:2px solid red;
+                
+                p{font-size: 0.75em;}
+            }
         } 
     }
     .view_project{
@@ -62,12 +74,14 @@
         margin-top: -10%;
         writing-mode: vertical-rl;
         text-orientation: mixed;
+        vertical-align: top;
         @media #{$medium-up}{display: none;}
         span{
             text-transform: uppercase;
             font-size: small;
             color:$color_primary;
             font-weight: normal;
+           
         }
     }
     // Projet
@@ -85,10 +99,16 @@
                 flex-direction: row;
                 justify-content: center;
                 // border:2px solid brown;
+                @media #{$medium-up}{ 
+                    flex-direction: column;
+                }
                 .box1,.box2{
                     // border:2px solid yellow;
                     width: auto;
                     margin:5%;
+                    @media #{$medium-up}{ 
+                        margin: 0;
+                    }
                     .image{
                         position: relative;
                         margin: 7%;
@@ -131,35 +151,50 @@
                     align-items: center;
                     }
                 .projet1{
-                    width: 440px;
-                    height: 285px;
-                    // border:2px solid darkblue;
-                   
+                    width: 550px;
+                    @media #{$medium-up}{ 
+                        width: 300px;
+                    }
+                    img{
+                        background-position: center;
+                        width: 550px;
+                        @media #{$medium-up}{ 
+                            width: 300px;
+                        }
+                    }                   
                 }
                 .projet2{
-                    width: 350px;
-                    height: 240px;
-                    // border:2px solid orangered;
-                    margin-left: 29% !important;
+                    width: 450px;
+                    height: auto;
+                    margin-left: 27% !important;
+                    @media #{$medium-up}{ 
+                        margin-left: 30px !important;
+                        width: 300px;
+                    }
+                    img{
+                        background-position: center;
+                        width: 450px;
+                        @media #{$medium-up}{ 
+                            width: 300px;
+                        }
+                    }
                 }
                 .projet3{
-                    width: 265px;
-                    height: 350px;
-                    // border:2px solid darkgreen;
+                    width: 310px;
+                    img{
+                        background-position: center;
+                        width: 310px;
+                    }
                 }
                 .all_project{
                     width: 200px;
                     height: 70px;
                     background-color: $color_primary;
                     padding: 1em;
-                    // margin: 5%;
-                    margin-top: 50px;
+                    margin-top: 20px;
                     margin-bottom: 20px;
-
+                    text-align: center;
                     border-radius: 12px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                     cursor: pointer;
                     p{
                         color: white;
@@ -167,15 +202,19 @@
                         font-weight: 700;
                     }
                 }
-
             }
         }    
-        }         
-    }
+    }         
+}
     // Contact
      section{
         .title-contact{
             margin-left: 40%;
+            @media #{$medium-up}{ 
+            margin-left: 20%;
+                
+            }
+            hr{margin-top: 5%;}
         }
         .intro_contact{
             // border:2px solid rebeccapurple;
