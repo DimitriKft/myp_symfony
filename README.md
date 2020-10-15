@@ -42,9 +42,9 @@ Ensuite, dans l'ordre taper les commandes dans votre terminal :
 
 Une fois sur l'application, il ne vous reste plus qu'a vous connecter au back-office en ajouter dans l'URL ``/admin``.
 
-Nom d’utilisateur :  ``admin``
-
-Mot de Passe:        ``admin`` 
+Par défaut le login et le mot de passe sont :
+  Nom d’utilisateur :  ``admin``
+  Mot de Passe :       ``admin`` 
 
 ## Fabriqué avec
 
