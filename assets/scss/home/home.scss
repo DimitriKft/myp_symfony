@@ -3,7 +3,7 @@
 
 // -> PAGE ACCUEIL
 .container {
-    border:2px solid rebeccapurple;
+    // border:2px solid rebeccapurple;
     width: 80%;
     position: relative;
     z-index: 3;
@@ -58,7 +58,7 @@
     }
     .view_project{
         position: absolute;
-        margin-left: 110%;
+        margin-left: 100%;
         margin-top: -10%;
         writing-mode: vertical-rl;
         text-orientation: mixed;
@@ -72,41 +72,43 @@
     }
     // Projet
     section{
+        .title_work{margin-top: 10%;}
         .projets_all{
             flex-direction: column;
             // border:3px solid royalblue;
             width: 100%;
             margin-bottom: 10%;
-        
-            
+            margin-top: 5%;
+
             .box{
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-                border:2px solid brown;
+                // border:2px solid brown;
                 .box1,.box2{
-                    border:2px solid yellow;
+                    // border:2px solid yellow;
                     width: auto;
                     margin:5%;
                     .image{
                         position: relative;
-                        margin: 5%;
-                        background-size: cover;
+                        margin: 7%;
+                        background-size: contain;
                         background-clip: content-box;
                         border-radius: 20px;
-                        background-position: center center;
+                        background-position: center;
                         overflow: hidden;
                     }
                     .image__title{
                         position: absolute;
-                        left: 0;
+                        left: 0px;
                         right: 0;
                         bottom: 0;
                         height: 100%;
                         width: 100%;
                         margin-left: 0;
                         display: flex;
-                        justify-content: flex-end;
+                        justify-content: flex-start;
+                        align-items: flex-end;
                         background-color: $color_primary;
                         opacity: 0;
                         transition: all 0.4s ease 0s; 
@@ -122,7 +124,12 @@
                     }                      
                 }
                 .box1{ justify-content: flex-end;}
-                .box2{ justify-content: center;align-items: center;}
+                .box2{ 
+                    display:flex; 
+                    flex-direction: column;
+                    justify-content: center; 
+                    align-items: center;
+                    }
                 .projet1{
                     width: 440px;
                     height: 285px;
@@ -145,11 +152,15 @@
                     height: 70px;
                     background-color: $color_primary;
                     padding: 1em;
-                    margin: 10%;
+                    // margin: 5%;
+                    margin-top: 50px;
+                    margin-bottom: 20px;
+
                     border-radius: 12px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    cursor: pointer;
                     p{
                         color: white;
                         font-size: 1.5em;
@@ -159,69 +170,7 @@
 
             }
         }    
-            .title_h2{width: 130%;}  
-        }
-        .box_project{
-            padding: 2em;
-            width: 100%;
-            @media #{$medium-up}{
-                height: auto;
-                display: flex;
-                flex-direction: column;
-                padding: auto;
-            }
-            img{
-                z-index: 1;
-                position: relative;
-                width: 430px; 
-                height:300px;
-                @media #{$medium-up}{
-                    width: 430px;
-                    height: auto;
-                }
-            }
-        }    
-        .box_project_first{
-            padding: 2em;
-            width: 100%;
-            border:2px solid red;
-            @media #{$medium-up}{
-                height: auto;
-                display: flex;
-                flex-direction: column;
-                padding: auto;
-            }
-            img{
-                z-index: 1;
-                position: relative;
-                width: 430px; 
-                height:300px;
-                @media #{$medium-up}{
-                    width: 430px;
-                    height: auto;
-                }
-            }
-        }  
-        .box_project_last{
-            padding: 2em;
-            width: 100%;
-            @media #{$medium-up}{
-                height: auto;
-                display: flex;
-                flex-direction: column;
-                padding: auto;
-            }
-            img{
-                z-index: 1;
-                position: relative;
-                width: 430px; 
-                height:300px;
-                @media #{$medium-up}{
-                    width: 430px;
-                    height: auto;
-                }
-            }
-        }  
+        }         
     }
     // Contact
      section{
