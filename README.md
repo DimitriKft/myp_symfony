@@ -49,6 +49,22 @@ Par défaut le login et le mot de passe sont :
 Pour modifier vos paramètre personnel rendez vous dans le fichier : ``src/DataFixtures/UserFixtures.php``
 Ici vous pouvez modifier vos paramètres personnels (Email, Nom/Prénom, Numéro de téléphone, lien vers vos Linkedin/Github)
 
+     public function load(ObjectManager $manager)
+      {
+          $user = new User();
+          $user->setEmail('admin@mail.com');
+          $user->setRoles(['ROLE_ADMIN']);
+          $user->setPassword($this->passwordEncoder->encodePassword($user,'azeaze'));
+          $user->setLastName('Lerdorf');
+          $user->setFirstName('Rasmus');
+          $user->setPhone('0777882932');
+          $user->setLinkedin('https://www.linkedin.com/in/dimitri-klopfstein-12b399178/');
+          $user->setGithub('https://github.com/DimitriKft');
+          $manager->persist($user);
+
+          $manager->flush();
+      }
+
 Une fois vos paramètre personalisé, relancer la commande : ``php bin/console doctrine:fixtures:load``
 
 Il ne vous reste plus qu'a retourner dans votre backoffice ``/admin`` et de mettre vos projets en ligne ! 
