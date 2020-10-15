@@ -2,19 +2,16 @@
 
 // -> PAGE CONTACT 
 .content_contact{
-    border:2px solid rebeccapurple;
     display: flex;
     justify-content: space-around;
-    // height: 90%;
     margin-bottom: 10%;
+    margin-top: 5%;
     margin-left: 10%;
     @media #{$medium-up}{
         flex-direction: column;
         width: auto;
-        // margin-left: -25%;
     }
     .information{
-        // border:2px solid royalblue;
         width: 40%;
         @media #{$medium-up}{
            width: auto;
@@ -22,43 +19,39 @@
         p{
             font-size: 1.3em;
             text-align: start;
+            padding-top:1em ;
             @media #{$medium-up}{
                 font-size: 1em;
                 margin-top: 10%;
             }
         }
         div{
-            // border:2px solid red;
             margin-top: 20%;
             height: 50%;
+            display: flex;
+            flex-direction: column;
             @media #{$medium-up}{
                 margin-top: none;
                 width: 100%;
             }
             span{
-                // border:2px solid greenyellow;
                 align-items: center;
                 color: $color_primary;
                 font-weight: 800;
                 font-size: 20px;
                 margin-bottom: 15%;
-                // height: 60%;
                 @media #{$medium-up}{
                     font-size: 15px;
-                    // margin-bottom: 5%;
                     align-content: flex-start;
                 }
                 
                 .icon_contact{
                     color:black;
-                    //background-color: black;
                     border-radius: 5px;
                     font-size: 35px;
                     padding: 0.1em;
-                    // top:15%;
                     position: relative;
                     vertical-align: middle;
-                    // border:2px solid black;
                     @media #{$medium-up}{
                         margin-left: 0;
                     }
@@ -73,7 +66,6 @@
         }
     }
     .section-form{
-        //  border:2px solid red;
         .form{
             width: 450px;
             height: 475px;
@@ -82,9 +74,8 @@
             padding: 1em;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
-            align-items: flex-end;
-            padding-right: 15%;
+            justify-content: center;
+            align-items: center;
             @media #{$medium-up}{
                 width: 100%;
                 height: auto;
@@ -93,11 +84,13 @@
                 justify-content: center;
                 align-items: flex-center;
             }
-            
             input, textarea{
                 width: 300px;
+                display: flex;
                 align-items: flex-end;
+                text-align: end;
                 margin-bottom: 15px;
+                vertical-align: text-top;
                 @media #{$medium-up}{
                     width: 100%;
                     
