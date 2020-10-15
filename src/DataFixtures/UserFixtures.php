@@ -21,11 +21,11 @@ class UserFixtures extends Fixture
      
 
         $user = new User();
-        $user->setEmail('dim@mail.com');
+        $user->setEmail('admin@mail.com');
         $user->setRoles(['ROLE_ADMIN']);
         $user->setPassword($this->passwordEncoder->encodePassword($user,'azeaze'));
-        $user->setLastName('Klopfstein');
-        $user->setFirstName('Dimitri');
+        $user->setLastName('Lerdorf');
+        $user->setFirstName('Rasmus');
         $user->setPhone('0777882932');
         $user->setLinkedin('https://www.linkedin.com/in/dimitri-klopfstein-12b399178/');
         $user->setGithub('https://github.com/DimitriKft');
