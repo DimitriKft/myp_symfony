@@ -14,6 +14,8 @@
     }
     // Header
     .header{
+        // border:2px solid rebeccapurple;
+
         display: flex;
         align-items: center;
         @media #{$medium-up}{ 
@@ -23,6 +25,8 @@
             align-items: center;
         }
         .profil_picture{
+        // border:2px solid rebeccapurple;
+
             height: 550px;
             width: auto;
             border-radius: 13px;
@@ -33,27 +37,35 @@
                 width: 250px !important;  
             }
         }
-        .hr_title{
-            margin-top: -50%;
-            @media #{$medium-up}{ 
-                position: absolute;
-                margin-top: 5%;
-                margin-left: -180px;
+        span{
+            border:1px solid transparent;
+            margin-bottom: 21%;
+            margin-right: 2%;
+            .hr_title{
+                margin-top: 35%;
+                @media #{$medium-up}{ 
+                    position: absolute;
+                    margin-top: 5%;
+                    margin-left: -180px;
+                }
             }
         }
         div{
-            // width: 50%;
+            width: 80%;
             display: flex;
             justify-content: start;
             flex-direction: column;
-            margin-left: 2%;
-            // border:2px solid red;
+            // margin-left: 2%;
             @media #{$medium-up}{ 
                 width: auto;
                 text-align: center;
                 margin-top: 7%;
             }
-            p{font-size: 0.75em;}
+            div{
+                // border:2px solid red;
+                
+                p{font-size: 0.75em;}
+            }
         } 
     }
     .view_project{
@@ -92,10 +104,10 @@
                     .image{
                         position: relative;
                         margin: 7%;
-                        background-size: contain;
-                        background-clip: content-box;
+                        // background-size: contain;
+                        // background-clip: content-box;
                         border-radius: 20px;
-                        background-position: center;
+                        // background-position: center;
                         overflow: hidden;
                     }
                     .image__title{
@@ -131,20 +143,20 @@
                     align-items: center;
                     }
                 .projet1{
-                    width: 440px;
-                    height: 285px;
+                    width: 550px;
+                    height: 350px;
                     // border:2px solid darkblue;
                    
                 }
                 .projet2{
-                    width: 350px;
-                    height: 240px;
+                    width: 450px;
+                    height: 300px;
                     // border:2px solid orangered;
-                    margin-left: 29% !important;
+                    margin-left: 27% !important;
                 }
                 .projet3{
-                    width: 265px;
-                    height: 350px;
+                    width: 315px;
+                    height: 450px;
                     // border:2px solid darkgreen;
                 }
                 .all_project{
@@ -152,14 +164,10 @@
                     height: 70px;
                     background-color: $color_primary;
                     padding: 1em;
-                    // margin: 5%;
-                    margin-top: 50px;
+                    margin-top: 20px;
                     margin-bottom: 20px;
-
+                    text-align: center;
                     border-radius: 12px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
                     cursor: pointer;
                     p{
                         color: white;
@@ -167,15 +175,15 @@
                         font-weight: 700;
                     }
                 }
-
             }
         }    
-        }         
-    }
+    }         
+}
     // Contact
      section{
         .title-contact{
             margin-left: 40%;
+            hr{margin-top: 5%;}
         }
         .intro_contact{
             // border:2px solid rebeccapurple;

@@ -7,10 +7,12 @@
             <span>
                 <hr class='hr_title'>
             </span>
-        <div >
+        <div>
             <h1 >Dimitri Klopfstein</h1>
             <h3>développeur web et mobile</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tempor nibh. Sed et elementum mi. Etiam mattis faucibus mi et consequat. Vivamus at elementum diam. Nunc dignissim sodales purus ut egestas. Cras pulvinar mauris nec nisi pulvinar, et laoreet ligula cursus. Proin quis nulla ut leo consectetur posuere. Maecenas ac consequat sapien, quis rhoncus ipsum. Vivamus mattis iaculis volutpat. Duis euismod pharetra felis, id finibus arcu tempus vel. Nam vel semper libero. Pellentesque consequat viverra velit, vitae congue odio consectetur quis. Nunc venenatis neque nec leo laoreet semper. Phasellus rhoncus quam nec ex aliquam laoreet. Integer at diam bibendum, laoreet eros sed, consectetur lectus.</p>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tempor nibh. Sed et elementum mi. Etiam mattis faucibus mi et consequat. Vivamus at elementum diam. Nunc dignissim sodales purus ut egestas. Cras pulvinar mauris nec nisi pulvinar, et laoreet ligula cursus. Proin quis nulla ut leo consectetur posuere. Maecenas ac consequat sapien, quis rhoncus ipsum. Vivamus mattis iaculis volutpat. Duis euismod pharetra felis, id finibus arcu tempus vel. Nam vel semper libero. Pellentesque consequat viverra velit, vitae congue odio consectetur quis. Nunc venenatis neque nec leo laoreet semper. Phasellus rhoncus quam nec ex aliquam laoreet. Integer at diam bibendum, laoreet eros sed, consectetur lectus.</p>
+            </div>
         </div>
     </section>
 
@@ -23,7 +25,7 @@
     <section ><br>   
         <div class="titles title_work" 
              data-aos="fade-right" 
-             data-aos-duration="3000"
+             data-aos-duration="1000"
              data-aos-easing="ease-in-sine">
             <hr class="project"/>
             <div class="title_h2">
@@ -45,7 +47,7 @@
                         {% endfor %}
                     </diV>
                     <div class="projet projet2 image">    
-                        {% for projet in project2 %}
+                        {% for projet in project3 %}
                         <a class="projet_linkPage" href="{{ path('displayProject',{'id':projet.id}) }}" >
                         <img src="{{ vich_uploader_asset(projet, 'imageFile') }}" alt="">
                         <div class="image__title">                       
@@ -60,7 +62,7 @@
                         <p>En voir plus </p>
                     </div></a>
                     <div class="projet projet3 image">    
-                        {% for projet in project3 %}
+                        {% for projet in project2 %}
                         <a class="projet_linkPage" href="{{ path('displayProject',{'id':projet.id}) }}" >
                         <img src="{{ vich_uploader_asset(projet, 'imageFile') }}" alt="">
                         <div class="image__title">                       
@@ -77,7 +79,7 @@
 <section>   
     <div class="titles title-contact" 
         data-aos="fade-left"
-        data-aos-duration="3000"
+        data-aos-duration="1000"
         data-aos-easing="ease-in-sine">
         <hr class=""/>
         <div class="title_h2">
