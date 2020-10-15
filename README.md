@@ -79,10 +79,11 @@ Projet développé avec:
 
 Bundle utilisé dans le projet : 
 
-- EasyAdmin          [Documentation EasyAdmin](https://symfony.com/doc/current/bundles/EasyAdminBundle/index.html) 
-- Swift Mailer       [Documentation Swift Mailer](https://symfony.com/doc/current/email.html) 
-- VichUploaderBundle [Documentation VichUploaderBundle](https://symfony.com/doc/2.x/bundles/EasyAdminBundle/integration/vichuploaderbundle.html)
-- KnpPaginatorBundle [Documentation KnpPaginatorBundle](https://github.com/KnpLabs/KnpPaginatorBundle) 
+- EasyAdmin              [Documentation EasyAdmin](https://symfony.com/doc/current/bundles/EasyAdminBundle/index.html) 
+- Swift Mailer           [Documentation Swift Mailer](https://symfony.com/doc/current/email.html) 
+- VichUploaderBundle     [Documentation VichUploaderBundle](https://symfony.com/doc/2.x/bundles/EasyAdminBundle/integration/vichuploaderbundle.html)
+- KnpPaginatorBundle     [Documentation KnpPaginatorBundle](https://github.com/KnpLabs/KnpPaginatorBundle) 
+- DoctrineFixturesBundle [Documentation DoctrineFixturesBundle](https://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html) 
 
 
 ## Versions
