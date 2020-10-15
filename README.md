@@ -16,7 +16,7 @@ Après avoir cloné le projet avec ``git clone https://github.com/DimitriKft/myp
 
 Executez la commande ``cd myp_symfony`` pour vous rendre dans le dossier depuis le terminal.
 
-Ensuite, dans l'ordre taper les commandes : 
+Ensuite, dans l'ordre taper les commandes dans votre terminal : 
 
 - 1 ``composer install`` afin d'installer toutes les dépendances composer du projet.
 
@@ -32,7 +32,9 @@ Ensuite, dans l'ordre taper les commandes :
 
 - 6 Exécuter les dataFixtures avec la commande :                                     ``php bin/console doctrine:fixtures:load``
 
-- 6 Vous pouvez maintenant accéder à votre portfolio en vous connectant au serveur : ``symfony server:start``
+- 7 Voir avant le css avant compilation :                                            ``yarn run encore production --watch``
+
+- 8 Vous pouvez maintenant accéder à votre portfolio en vous connectant au serveur : ``symfony server:start``
 
 
 
@@ -42,7 +44,7 @@ Une fois sur l'application, il ne vous reste plus qu'a vous connecter au back-of
 
 Nom d’utilisateur :  ``admin``
 
-Mot de Passe: ``admin`` 
+Mot de Passe:        ``admin`` 
 
 ## Fabriqué avec
 
@@ -51,14 +53,21 @@ Projet développé avec:
 * [Symfony](https://symfony.com/) - Framework PHP Symfony
 **Latest Stable Release:** 5.1.5
 
+Bundle utilisé dans le projet : 
+
+- EasyAdmin          [Documentation EasyAdmin](https://symfony.com/doc/current/bundles/EasyAdminBundle/index.html) 
+- Swift Mailer       [Documentation Swift Mailer](https://symfony.com/doc/current/email.html) 
+- VichUploaderBundle [Documentation VichUploaderBundle](https://symfony.com/doc/2.x/bundles/EasyAdminBundle/integration/vichuploaderbundle.html)
+- KnpPaginatorBundle [Documentation KnpPaginatorBundle](https://github.com/KnpLabs/KnpPaginatorBundle) 
+
 
 ## Versions
 
 **Version** 0.0.1
 
 ## Auteurs
-* **Caroline chatelon** _alias_ [@Rocalinecht](https://github.com/Rocalinecht)
-* **Abdellah Skoundri** _alias_ [@Abdellah-SK](https://github.com/Abdellah-Sk)
+* **Caroline chatelon** _alias_  [@Rocalinecht](https://github.com/Rocalinecht)
+* **Abdellah Skoundri** _alias_  [@Abdellah-SK](https://github.com/Abdellah-Sk)
 * **Dimitri Klopfstein** _alias_ [@DimitriKft](https://github.com/DimitriKft)
 
 
