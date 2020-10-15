@@ -6,8 +6,8 @@ Développement du portfolio avec Symfony
 ### Installation
 
 *Prérequi sur votre machine pour le bon fonctionnement de ce projet : 
-- PHP Version 7.4.11 [Installer PHP](https://www.php.net/manual/fr/install.php) [Mettre à jour PHP en 7.4 (Ubuntu)](https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/)
-- Symfony version 5.0 minimum avec le CLI(Binaire) Symfony [Installer Symfony](https://symfony.com/doc/current/setup.html) [Installer Binaire Symfony](https://symfony.com/download) 
+- PHP Version 7.4.11 [Installer PHP](https://www.php.net/manual/fr/install.php) --  [Mettre à jour PHP en 7.4 (Ubuntu)](https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/)
+- Symfony version 5.0 minimum avec le CLI(Binaire) Symfony [Installer Symfony](https://symfony.com/doc/current/setup.html) --  [Installer Binaire Symfony](https://symfony.com/download) 
 - Composer [Installer Composer](https://getcomposer.org/download/) 
 
 Les étapes pour installer le projet.
@@ -20,15 +20,17 @@ Ensuite, dans l'ordre taper les commandes :
 
 - 1 ``composer install`` afin d'installer toutes les dépendances composer du projet.
 
-- 2 ``npm install``  afin d'installer toutes les dépendances npm du projet.
+- 2 ``npm install``      afin d'installer toutes les dépendances npm du projet.
 
-- 3 ``yarn install``  afin d'installer toutes les dépendances yarn du projet.
+- 3 ``yarn install``     afin d'installer toutes les dépendances yarn du projet.
 
-- 4 installer la base de donnée MySQL : ``symfony console doctrine:database:create``
+- 4 ``composer updated`` nécessaire pour que composer installe certaine dépendance.
 
-- 5 Exécuter la migration en base de donnée : ``symfony console doctrine:migration:migrate``
+- 4 installer la base de donnée MySQL :                                              ``symfony console doctrine:database:create``
 
-- 6 Exécuter les dataFixtures avec la commande : ``php bin/console doctrine:fixtures:load``
+- 5 Exécuter la migration en base de donnée :                                        ``symfony console doctrine:migration:migrate``
+
+- 6 Exécuter les dataFixtures avec la commande :                                     ``php bin/console doctrine:fixtures:load``
 
 - 6 Vous pouvez maintenant accéder à votre portfolio en vous connectant au serveur : ``symfony server:start``
 
