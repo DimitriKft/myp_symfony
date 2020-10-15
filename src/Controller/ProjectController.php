@@ -18,7 +18,8 @@ class ProjectController extends AbstractController
      */
     public function index(ProjectsRepository $repo,  UserRepository $userRepository, Request $request, PaginatorInterface $paginator)
     {
-        $data = $repo->findAll();
+       
+        $data = $repo->findBy(array(), array('updatedAt' => 'DESC'));
         $users    = $userRepository->findAll();
 
         // $data = $this->getDoctrine()->getRepository(User::class)->findBy([],[
