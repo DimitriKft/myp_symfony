@@ -43,8 +43,14 @@ Ensuite, dans l'ordre taper les commandes dans votre terminal :
 Une fois sur l'application, il ne vous reste plus qu'a vous connecter au back-office en ajouter dans l'URL ``/admin``.
 
 Par défaut le login et le mot de passe sont :
-  - Nom d’utilisateur :  ``admin``
+  - Nom d’utilisateur :  ``admin@mail.com``
   - Mot de Passe :       ``admin`` 
+  
+Pour modifier vos paramètre personnel rendez vous dans le fichier : src/DataFixtures/UserFixtures.php
+Ici vous pouvez modifier vos paramètres personnels (Email, Nom/Prénom, Numéro de téléphone, lien vers vos Linkedin/Github)
+
+Une fois vos paramètre personalisé, relancer la commande : ``php bin/console doctrine:fixtures:load``
+  
 
 ## Fabriqué avec
 
