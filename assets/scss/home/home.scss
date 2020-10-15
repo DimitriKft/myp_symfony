@@ -38,20 +38,20 @@
             }
         }
         span{
-            border:1px solid transparent;
-            margin-bottom: 21%;
+            border:2px solid transparent;
+            margin-bottom: 20%;
             margin-right: 2%;
             .hr_title{
                 margin-top: 35%;
                 @media #{$medium-up}{ 
                     position: absolute;
-                    margin-top: 5%;
-                    margin-left: -180px;
+                    margin-top: 14%;
+                    margin-left: -7%;
                 }
             }
         }
         div{
-            width: 80%;
+            width: 75%;
             display: flex;
             justify-content: start;
             flex-direction: column;
@@ -97,17 +97,23 @@
                 flex-direction: row;
                 justify-content: center;
                 // border:2px solid brown;
+                @media #{$medium-up}{ 
+                    flex-direction: column;
+                }
                 .box1,.box2{
                     // border:2px solid yellow;
                     width: auto;
                     margin:5%;
+                    @media #{$medium-up}{ 
+                        margin: 0;
+                    }
                     .image{
                         position: relative;
                         margin: 7%;
-                        // background-size: contain;
-                        // background-clip: content-box;
+                        background-size: contain;
+                        background-clip: content-box;
                         border-radius: 20px;
-                        // background-position: center;
+                        background-position: center;
                         overflow: hidden;
                     }
                     .image__title{
@@ -144,20 +150,39 @@
                     }
                 .projet1{
                     width: 550px;
-                    height: 350px;
-                    // border:2px solid darkblue;
-                   
+                    @media #{$medium-up}{ 
+                        width: 300px;
+                    }
+                    img{
+                        background-position: center;
+                        width: 550px;
+                        @media #{$medium-up}{ 
+                            width: 300px;
+                        }
+                    }                   
                 }
                 .projet2{
                     width: 450px;
-                    height: 300px;
-                    // border:2px solid orangered;
+                    height: auto;
                     margin-left: 27% !important;
+                    @media #{$medium-up}{ 
+                        margin-left: 30px !important;
+                        width: 300px;
+                    }
+                    img{
+                        background-position: center;
+                        width: 450px;
+                        @media #{$medium-up}{ 
+                            width: 300px;
+                        }
+                    }
                 }
                 .projet3{
-                    width: 315px;
-                    height: 450px;
-                    // border:2px solid darkgreen;
+                    width: 310px;
+                    img{
+                        background-position: center;
+                        width: 310px;
+                    }
                 }
                 .all_project{
                     width: 200px;
@@ -183,6 +208,10 @@
      section{
         .title-contact{
             margin-left: 40%;
+            @media #{$medium-up}{ 
+            margin-left: 20%;
+                
+            }
             hr{margin-top: 5%;}
         }
         .intro_contact{
