@@ -52,11 +52,6 @@ class User implements UserInterface
     private $projects;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
-    private $phone;
-
-    /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $linkedin;
@@ -65,6 +60,11 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $github;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $phone;
 
 
     public function __construct()
@@ -210,17 +210,6 @@ class User implements UserInterface
         return $this->last_name;
     }
 
-    public function getPhone(): ?int
-    {
-        return $this->phone;
-    }
-
-    public function setPhone(?int $phone): self
-    {
-        $this->phone = $phone;
-
-        return $this;
-    }
 
     public function getLinkedin(): ?string
     {
@@ -242,6 +231,18 @@ class User implements UserInterface
     public function setGithub(?string $github): self
     {
         $this->github = $github;
+
+        return $this;
+    }
+
+    public function getPhone(): ?string
+    {
+        return $this->phone;
+    }
+
+    public function setPhone(?string $phone): self
+    {
+        $this->phone = $phone;
 
         return $this;
     }
