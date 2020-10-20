@@ -27,6 +27,7 @@ class UserFixtures extends Fixture
         $user->setPhone('07.77.88.29.32');
         $user->setLinkedin('https://www.linkedin.com/in/dimitri-klopfstein-12b399178/');
         $user->setGithub('https://github.com/DimitriKft');
+        $user->setAvatar('/img/profil.jpg');
         $manager->persist($user);
     
         $manager->flush();
