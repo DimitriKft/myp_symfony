@@ -40,9 +40,9 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToDashboard('Dashboard', 'fa fa-home'),
 
             MenuItem::section('C.R.U.D'),
-            MenuItem::linkToCrud('Projets', 'fa fa-tags', Projects::class),
-            MenuItem::linkToCrud('Technologie', 'fa fa-tags', Technologies::class),
-            MenuItem::linkToCrud('Utilisateurs', 'fa fa-tags', User::class)
+            MenuItem::linkToCrud('Projets', 'fa fa-laptop-code', Projects::class),
+            MenuItem::linkToCrud('Technologie', 'fa fa-code', Technologies::class),
+            // MenuItem::linkToCrud('Utilisateurs', 'fa fa-tags', User::class)
         ];
     }
 }
