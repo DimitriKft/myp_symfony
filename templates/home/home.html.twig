@@ -3,13 +3,13 @@
 {% block body %}
     {# Header #}
     <section class="header animate__animated animate__fadeInLeft">
-        <img class="profil_picture" src='{{ asset('/img/profil.jpg') }}'/>
-        <span>
-            <hr class='hr_title'>
-        </span>
-        <div>
-            {% for user in users %}   
-                <h1 >{{ user.firstname }} {{ user.lastname }}</h1>
+             {% for user in users %}   
+                <img class="profil_picture" src='{{ asset(user.avatar) }}'/>
+                <span>
+                    <hr class='hr_title'>
+                </span>
+                <div>
+                    <h1 >{{ user.firstname }} {{ user.lastname }}</h1>
             {% endfor %}
             <h3>développeur web et mobile</h3>
             <div>
