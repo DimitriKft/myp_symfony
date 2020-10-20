@@ -8,7 +8,10 @@
                 <hr class='hr_title'>
             </span>
         <div>
-            <h1 >Dimitri Klopfstein</h1>
+            {% for user in users %}
+                
+            <h1 >{{ user.firstname }} {{ user.lastname }}</h1>
+            {% endfor %}
             <h3>développeur web et mobile</h3>
             <div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tempor nibh. Sed et elementum mi. Etiam mattis faucibus mi et consequat. Vivamus at elementum diam. Nunc dignissim sodales purus ut egestas. Cras pulvinar mauris nec nisi pulvinar, et laoreet ligula cursus. Proin quis nulla ut leo consectetur posuere. Maecenas ac consequat sapien, quis rhoncus ipsum. Vivamus mattis iaculis volutpat. Duis euismod pharetra felis, id finibus arcu tempus vel. Nam vel semper libero. Pellentesque consequat viverra velit, vitae congue odio consectetur quis. Nunc venenatis neque nec leo laoreet semper. Phasellus rhoncus quam nec ex aliquam laoreet. Integer at diam bibendum, laoreet eros sed, consectetur lectus.</p>

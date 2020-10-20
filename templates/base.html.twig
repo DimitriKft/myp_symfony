@@ -19,14 +19,14 @@
                 {{ message }}
             </div>
         {% endfor %}
+        {% for user in users %}
         <header>
             <a href="/">
             <div class="logo">
                 <span class="circle">J</span>
-                <span><p>Abdellah Skoundri</p></span>
+                <span><p>{{ user.firstname }}  {{ user.lastname }}</p></span>
             </div>
             </a>
-            {% for user in users %}
             <div class="link">
                 <div class='item_logo'> <a href="{{ user.linkedin }}"><img src='{{ asset('img/Icon-linkedin.png') }}'/><span>Linkedin</span></a></div>
                 <div class='item_logo'> <a href="{{ user.github }}"><img src='{{ asset('img/Icon-github.png') }}'/><span>Github</span></a></div>
@@ -47,13 +47,13 @@
         </main>
 
         <footer>
+            {% for user in users %}
             <a href="/">
             <div class="logo">
                 <span class="circle">J</span>
-                <span><p>Abdellah Skoundri</p></span>
+                <span><p>{{ user.firstname }}  {{ user.lastname }}</p></span>
             </div>
             </a>    
-            {% for user in users %}
             <div class="link">
                 <div class='item_logo'> <a href="{{ user.linkedin }}"><img src='{{ asset('img/Icon-linkedin.png') }}'/></a></div>
                 <div class='item_logo'> <a href="{{ user.github }}"><img src='{{ asset('img/Icon-github.png') }}'/></a></div>
