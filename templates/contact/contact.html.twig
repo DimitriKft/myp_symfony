@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+{% block title %}Hello ContactController!{% endblock %}
+{% block body %}
+    <div class="titles"
+        data-aos="fade-right" 
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-sine">
+        <hr class="project"/>
+        <div class="title_h2">
+            <h2>Contact</h2>
+            <span>Contact</span>
+        </div>       
+    </div>
+
+    <section class="content_contact">
+        <div class="information">
+            <p>Pour une question où juste envie <br/> d'une discution</p>
+            {% for user in users %}
+                <div>
+                    <span><ion-icon name="mail-outline" class="icon_contact"></ion-icon>{{ user.email }}</span>
+                    <span><ion-icon name="call-outline" class="icon_contact phone"></ion-icon>{{ user.phone }}</span>
+                </div>
+            {% endfor %}
+        </div>   
+        <div class="section-form">
+            <div class="form">
+            {{ form_start(form) }}
+                <span>
+                    {{ form_row(form.nom, {"label":"NOM"}) }}
+                </span>
+                <span>
+                    {{ form_row(form.prenom, {"label":"PRÉNOM"}) }}
+                </span>
+                <span>
+                    {{ form_row(form.email, {"label":"EMAIL"}) }}
+                </span>
+                <span>
+                    {{ form_row(form.message, {"label":"MESSAGE"}) }}
+                </span>
+            {{ form_end(form) }}
+            </div>
+        </div>
+    </section>
+{% endblock %}

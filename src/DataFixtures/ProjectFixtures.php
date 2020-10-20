@@ -16,7 +16,7 @@ class ProjectFixtures extends Fixture
         // On configure dans quelles langues nous voulons nos données
         $faker = Faker\Factory::create('fr_FR');
 
-        // on créé 10 personnes
+        // on créé 10 projets
         for ($i = 0; $i < 10; $i++) {
             $project = new Projects();
             $project->setName($faker->company);

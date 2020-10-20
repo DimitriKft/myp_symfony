@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+{% block title %}Projets{% endblock %}
+
+{% block body %}
+    <section>
+        <div class="titles"
+            data-aos="fade-right" 
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-sine">
+            <hr class=""/>
+            <div class="title_h2">
+                <h2>Mes projets</h2>
+                <span>Mes projets</span>
+            </div>       
+        </div>
+
+        <div class="all_projects"> 
+        {% for project in projects %}
+            {% if loop.index is divisible by(2) %}
+                <div class="box_project right" >       
+            {% else %}
+                <div class="box_project">      
+            {% endif %}
+                <img src="{{ vich_uploader_asset(project, 'imageFile') }}" alt="">
+                <div class="projet_contents">
+                    <p class="projet_name">{{ project.name | u.truncate(20, '...') }}</p>
+                    <p class="projet_description">{{ project.description | u.truncate(110, '...') }}</p>
+                    {% for technology in project.technology %}
+                        {% if loop.index == 1 %}
+                            {{ technology.name }}
+                        {% endif %}
+                    {% endfor %} 
+                    <a class="projet_linkPage" href="{{ path('displayProject',{'id':project.id}) }}" >En savoir plus </a>
+                </div>
+            </div>
+        {% endfor %}
+                <div class="pagination">
+                    {{ knp_pagination_render(projects) }}
+                </div>    
+        </div>
+    </section>
+{% endblock %}

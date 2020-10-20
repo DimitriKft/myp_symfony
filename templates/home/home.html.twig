@@ -4,13 +4,12 @@
     {# Header #}
     <section class="header animate__animated animate__fadeInLeft">
         <img class="profil_picture" src='{{ asset('/img/profil.jpg') }}'/>
-            <span>
-                <hr class='hr_title'>
-            </span>
+        <span>
+            <hr class='hr_title'>
+        </span>
         <div>
-            {% for user in users %}
-                
-            <h1 >{{ user.firstname }} {{ user.lastname }}</h1>
+            {% for user in users %}   
+                <h1 >{{ user.firstname }} {{ user.lastname }}</h1>
             {% endfor %}
             <h3>développeur web et mobile</h3>
             <div>
@@ -24,7 +23,7 @@
         <img  src='{{ asset('/img/icon-arrow.png') }}'/>
     </div>
     
-   {# Aperçu projets#}
+   {# Aperçu projets #}
     <section ><br>   
         <div class="titles title_work" 
              data-aos="fade-right" 
@@ -36,29 +35,34 @@
                 <span>Work work work ...</span>
             </div>       
         </div>
+
         <div class="projets_all">
             <div class="box">  
+
                 <div class="box1">
                     <div class="projet projet1 image">    
                         {% for projet in project1 %}
-                        <a class="projet_linkPage" href="{{ path('displayProject',{'id':projet.id}) }}" >
-                        <img src="{{ vich_uploader_asset(projet, 'imageFile') }}" alt="">
-                        <div class="image__title">                       
-                            <p class="projet_name">{{ projet.name | u.truncate(20, '...') }}</p> 
-
-                        </div></a> 
+                            <a class="projet_linkPage" href="{{ path('displayProject',{'id':projet.id}) }}" >
+                            <img src="{{ vich_uploader_asset(projet, 'imageFile') }}" alt="">
+                            <div class="image__title">                       
+                                <p class="projet_name">{{ projet.name | u.truncate(20, '...') }}</p> 
+                            </div>
+                            </a> 
                         {% endfor %}
                     </diV>
+
                     <div class="projet projet2 image">    
                         {% for projet in project3 %}
-                        <a class="projet_linkPage" href="{{ path('displayProject',{'id':projet.id}) }}" >
-                        <img src="{{ vich_uploader_asset(projet, 'imageFile') }}" alt="">
-                        <div class="image__title">                       
-                            <p class="projet_name">{{ projet.name | u.truncate(20, '...') }}</p> 
-                        </div> </a> 
+                            <a class="projet_linkPage" href="{{ path('displayProject',{'id':projet.id}) }}" >
+                            <img src="{{ vich_uploader_asset(projet, 'imageFile') }}" alt="">
+                            <div class="image__title">                       
+                                <p class="projet_name">{{ projet.name | u.truncate(20, '...') }}</p> 
+                            </div>
+                            </a> 
                         {% endfor %}
                     </div>
                 </div>
+
                 <div class="box2">
                     <a href="/project">
                     <div class="all_project">
@@ -66,11 +70,12 @@
                     </div></a>
                     <div class="projet projet3 image">    
                         {% for projet in project2 %}
-                        <a class="projet_linkPage" href="{{ path('displayProject',{'id':projet.id}) }}" >
-                        <img src="{{ vich_uploader_asset(projet, 'imageFile') }}" alt="">
-                        <div class="image__title">                       
-                            <p class="projet_name">{{ projet.name | u.truncate(20, '...') }}</p> 
-                        </div></a>  
+                            <a class="projet_linkPage" href="{{ path('displayProject',{'id':projet.id}) }}" >
+                            <img src="{{ vich_uploader_asset(projet, 'imageFile') }}" alt="">
+                            <div class="image__title">                       
+                                <p class="projet_name">{{ projet.name | u.truncate(20, '...') }}</p> 
+                            </div>
+                            </a>  
                         {% endfor %}
                     </div>
                 </div>
@@ -79,23 +84,22 @@
     </section>
 
 {# Invitation page Contact #}      
-<section>   
-    <div class="titles title-contact" 
-        data-aos="fade-left"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-sine">
-        <hr class=""/>
-        <div class="title_h2">
-            <h2>Ca vous à plus?</h2>
-            <span>Ca vous à plus?</span>
-        </div>       
-    </div>
-    <div class="intro_contact">
-        <p >Ceci n'est que le début, j'ai encore pleins de chose à montrer. <br/>
-        N'hésiter pas à aller voir ce qui se cache <a href="/project"><span>ici</span>?</a></p>
-    </div>
-</section>
-  
+    <section>   
+        <div class="titles title-contact" 
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-sine">
+            <hr class=""/>
+            <div class="title_h2">
+                <h2>Ca vous à plus?</h2>
+                <span>Ca vous à plus?</span>
+            </div>       
+        </div>
+        <div class="intro_contact">
+            <p >Ceci n'est que le début, j'ai encore pleins de chose à montrer. <br/>
+            N'hésiter pas à aller voir ce qui se cache <a href="/project"><span>ici</span>?</a></p>
+        </div>
+    </section>
 {% endblock %}
 
 
