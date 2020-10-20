@@ -1,7 +1,6 @@
 # Portfolio Symfony
 
-Développement du portfolio avec Symfony
-
+Portfolio avec Symfony
 
 ### Installation
 
@@ -9,6 +8,8 @@ Développement du portfolio avec Symfony
 - PHP Version 7.4.11 [Installer PHP](https://www.php.net/manual/fr/install.php) --  [Mettre à jour PHP en 7.4 (Ubuntu)](https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/)
 - Symfony version 5.0 minimum avec le CLI(Binaire) Symfony [Installer Symfony](https://symfony.com/doc/current/setup.html) --  [Installer Binaire Symfony](https://symfony.com/download) 
 - Composer [Installer Composer](https://getcomposer.org/download/) 
+- Npm  [Installer Npm](https://www.npmjs.com/get-npm) 
+- Yarn  [Installer Yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable) 
 
 Les étapes pour installer le projet.
 
