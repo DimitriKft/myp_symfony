@@ -38,7 +38,7 @@ class DashboardController extends AbstractDashboardController
             MenuItem::section('C.R.U.D'),
             MenuItem::linkToCrud('Projets', 'fa fa-laptop-code', Projects::class),
             MenuItem::linkToCrud('Technologie', 'fa fa-code', Technologies::class),
-            MenuItem::linkToCrud('Technologie', 'fa fa-code', User::class)
+            MenuItem::linkToCrud('Administrateur', 'fa fa-user-tie', User::class)
         ];
     }
 }
