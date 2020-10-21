@@ -39,7 +39,7 @@ class ProjectController extends AbstractController
     {
         $users    = $userRepository->findAll();
         return $this->render('project/project.html.twig', [
-            'project' => $project,
+            'project'  => $project,
             'users'    => $users 
         ]);
     }
