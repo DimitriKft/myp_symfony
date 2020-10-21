@@ -91,6 +91,8 @@ Bundle utilisé dans le projet :
 
 **Version** 0.0.1
 
+**Version DJANGO ** Le projetest également disponible avec le [framework python DJANGO ](https://github.com/Abdellah-Sk/myp-django) 
+
 ## Auteurs
 * **Caroline Chatelon** _alias_  [@Rocalinecht](https://github.com/Rocalinecht)
 * **Abdellah Skoundri** _alias_  [@Abdellah-SK](https://github.com/Abdellah-Sk)
