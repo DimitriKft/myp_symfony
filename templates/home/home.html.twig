@@ -4,7 +4,7 @@
     {# Header #}
     <section class="header animate__animated animate__fadeInLeft">
              {% for user in users %}   
-                <img class="profil_picture" src='{{ asset(user.avatar) }}'/>
+                <img class="profil_picture" src='{{ vich_uploader_asset(user, 'imageFile') }}'/>
                 <span>
                     <hr class='hr_title'>
                 </span>
