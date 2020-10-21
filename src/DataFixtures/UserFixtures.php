@@ -28,6 +28,7 @@ class UserFixtures extends Fixture
         $user->setLinkedin('https://www.linkedin.com/in/dimitri-klopfstein-12b399178/');
         $user->setGithub('https://github.com/DimitriKft');
         $user->setAvatar('/img/profil.jpg');
+        $user->setUpdated(new \DateTime('06/04/2014'));
         $manager->persist($user);
     
         $manager->flush();
