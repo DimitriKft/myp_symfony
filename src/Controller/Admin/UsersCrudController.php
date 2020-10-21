@@ -7,7 +7,6 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use Vich\UploaderBundle\Form\Type\VichImageType;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
 class UsersCrudController extends AbstractCrudController
@@ -17,19 +16,6 @@ class UsersCrudController extends AbstractCrudController
         return User::class;
     }
 
-    // public function configureFields(string $pageName): iterable
-    // {
-    //     return [
-    //         TextField::new('last_name'),
-    //         TextField::new('first_name'),
-    //         TextField::new('email'),
-    //         TextField::new('password'),
-    //         IntegerField::new('phone'),
-    //         TextField::new('linkedin'),
-    //         TextField::new('github'),
-    //         TextField::new('avatar'),
-    //     ];
-    // }
 
     public function configureFields(string $pageName): iterable
     {
@@ -46,7 +32,6 @@ class UsersCrudController extends AbstractCrudController
             TextField::new('last_name'),
             TextField::new('first_name'),
             TextField::new('email'),
-            TextField::new('password'),
             Textfield::new('phone'),
             TextField::new('linkedin'),
             TextField::new('github')
