@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\User;
 use App\Entity\Projects;
 use App\Entity\Technologies;
 use Symfony\Component\HttpFoundation\Response;
@@ -36,7 +37,8 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToDashboard('Dashboard', 'fa fa-home'),
             MenuItem::section('C.R.U.D'),
             MenuItem::linkToCrud('Projets', 'fa fa-laptop-code', Projects::class),
-            MenuItem::linkToCrud('Technologie', 'fa fa-code', Technologies::class)
+            MenuItem::linkToCrud('Technologie', 'fa fa-code', Technologies::class),
+            MenuItem::linkToCrud('Technologie', 'fa fa-code', User::class)
         ];
     }
 }

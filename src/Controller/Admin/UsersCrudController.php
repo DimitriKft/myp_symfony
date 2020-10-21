@@ -25,6 +25,7 @@ class UsersCrudController extends AbstractCrudController
             IntegerField::new('phone'),
             TextField::new('linkedin'),
             TextField::new('github'),
+            TextField::new('avatar'),
         ];
     }
 }
