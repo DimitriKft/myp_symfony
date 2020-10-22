@@ -45,14 +45,15 @@ Ensuite, dans l'ordre taper les commandes dans votre terminal :
 
 ## Démarrage
 
-Une fois sur l'application, il ne vous reste plus qu'a vous connecter au back-office en ajouter dans l'URL ``/admin``.
+Une fois sur l'application, il ne vous reste plus qu'a vous enregistrer ``/register``.
+   ! Attention l'application ne crée que des roles ADMIN,par mesure de sécurité, une fois votre utilisateur crée, il faut impérativement supprimer la route /register dans ``src/Controller/RegistrationController.php`` 
+Puis enfin loger vous ``/login`` rendez vous dans le backoffice ``/admin``, il vous ne reste plus qu'a parametrer votre administrateur et enregistrer vos projets ! 
 
-Par défaut le login et le mot de passe sont :
-  - Nom d’utilisateur :  ``admin@mail.com``
-  - Mot de Passe :       ``admin`` 
+## Fixture
+Le projet comprend des données factices pour vous permettre de tester le rapidemmant le projet.
   
-Pour modifier vos paramètre personnel rendez vous dans le fichier : ``src/DataFixtures/UserFixtures.php``
-Ici vous pouvez modifier vos paramètres personnels (Email, Nom/Prénom, Numéro de téléphone, lien vers vos Linkedin/Github)
+Pour modifier vos fixtures rendez vous dans le fichier : ``src/DataFixtures/`` 
+Exemple : 
 
      public function load(ObjectManager $manager)
       {
@@ -70,10 +71,14 @@ Ici vous pouvez modifier vos paramètres personnels (Email, Nom/Prénom, Numéro
     
         $manager->flush();
       }
+      
+ Par défaut le login et le mot de passe sont :
+  - Nom d’utilisateur :  ``admin@mail.com``
+  - Mot de Passe :       ``admin`
 
 Une fois vos paramètre personalisé, relancer la commande : ``php bin/console doctrine:fixtures:load``
 
-Il ne vous reste plus qu'a retourner dans votre backoffice ``/admin`` et de mettre vos projets en ligne ! 
+Il ne vous reste plus qu'a retourner dans votre backoffice ``/admin`` et de modififier les projets en ligne ! 
   
 
 ## Fabriqué avec
