@@ -1,6 +1,11 @@
-// @import "navbar.scss";
+// ---> PAGE PROJET
 @import "../variables.scss";
 
+//  Ici ce trouve tous les elements de la page Projets 
+//  qui liste sous formes de "card" la liste de tous 
+//  ton travails. Grace a la boucle {%for%}, les projets
+//  son separer en deux et permet de de disposée les cards
+//  sur de deux cotée diferents.  
 
 section{
     .all_projects{
@@ -20,9 +25,8 @@ section{
             display: flex;
             @media #{$medium-up}{
                 height: auto;
-                display: flex;
-                flex-direction: column;
                 padding: auto;
+                @include display-column;
             }
             img{
                 z-index: 1;
@@ -36,7 +40,7 @@ section{
                 }
             }
             .projet_contents{
-                background-color: $color_primary;
+                background-color: $first_color;
                 z-index:2;
                 width: 35%;
                 padding: 2em;
@@ -44,27 +48,46 @@ section{
                 position: absolute;
                 text-align: start;
                 align-content: center;
-                margin-left: 35%;
-                margin-top: 5%;
+                // margin-left: 35%;
+                // margin-top: 5%;
+                margin: 7% 0 0 35%;
+
                 @media #{$medium-up}{
                     display: flex;
                     flex-direction: column;
                     margin-left: 0;
                     position: relative;
-                    width: 88.01%;
+                    width: 60%;
                 }
                 .projet_name{
-                    color: $background;
+                    color: $white_color;
                     font-size: 1.5em;
                     font-weight: 700;
                 }
                 .projet_description{
-                    color: $background;
+                    color: $white_color;
                     font-size: 0.8em;
                 }
                 .projet_linkPage{
                     font-style: oblique;
                     color: $background;
+                }
+            }
+            .projet_techno{
+                color: $third_color;
+                text-decoration: none;
+                list-style-type: none; 
+                font-size: 70px;
+                font-weight: 700;
+                opacity: 0.5;
+                z-index: 3;
+                left: 65%;
+                margin-top: 20%;
+                position: absolute;
+                @media #{$medium-up}{
+                    font-size: 50px;
+                    margin-bottom: 35%;
+                    text-align: center;
                 }
             }
         }
@@ -80,6 +103,9 @@ section{
                 @media #{$medium-up}{
                     margin-left: 0;
                 }
+            }
+            .projet_techno{
+                left: 20%;
             }
         }
     }
