@@ -47,11 +47,11 @@ Ensuite, dans l'ordre taper les commandes dans votre terminal :
 ## Démarrage
 
 Une fois sur l'application, il ne vous reste plus qu'a vous enregistrer ``/register``.
-   ! Attention l'application ne crée que des roles ADMIN,par mesure de sécurité, une fois votre utilisateur crée, il faut impérativement supprimer la route /register dans ``src/Controller/RegistrationController.php`` 
-Puis enfin loger vous ``/login`` rendez vous dans le backoffice ``/admin``, il vous ne reste plus qu'a parametrer votre administrateur et enregistrer vos projets ! 
+Attention, l'application ne crée que des roles ADMIN,par mesure de sécurité, une fois votre utilisateur crée, il faut impérativement supprimer la route /register dans ``src/Controller/RegistrationController.php`` 
+Puis enfin loger vous ``/login`` rendez vous dans le backoffice ``/admin``, il ne vous reste plus qu'a parametrer votre administrateur et enregistrer vos projets ! 
 
 ## Fixture
-Le projet comprend des données factices pour vous permettre de tester le rapidemmant le projet.
+Le projet comprend des données factices pour vous permettre de tester rapidemmant le portfolio.
   
 Pour modifier vos fixtures rendez vous dans le fichier : ``src/DataFixtures/`` 
 Exemple : 
