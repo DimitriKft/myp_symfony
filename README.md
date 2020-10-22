@@ -2,7 +2,7 @@
 
 Make Your Portfolio !
 
-### Installation
+### Prérequi
 
 *Prérequi sur votre machine pour le bon fonctionnement de ce projet : 
 - PHP Version 7.4.11 [Installer PHP](https://www.php.net/manual/fr/install.php) --  [Mettre à jour PHP en 7.4 (Ubuntu)](https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/)
@@ -11,7 +11,7 @@ Make Your Portfolio !
 - Npm  [Installer Npm](https://www.npmjs.com/get-npm) 
 - Yarn  [Installer Yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable) 
 
-Les étapes pour installer le projet.
+### Installation
 
 Après avoir cloné le projet avec ``git clone https://github.com/DimitriKft/myp_symfony.git``
 
