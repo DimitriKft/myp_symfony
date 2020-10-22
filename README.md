@@ -6,6 +6,7 @@ Make Your Portfolio !
 
 *Prérequi sur votre machine pour le bon fonctionnement de ce projet : 
 - PHP Version 7.4.11 [Installer PHP](https://www.php.net/manual/fr/install.php) --  [Mettre à jour PHP en 7.4 (Ubuntu)](https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/)
+- MySQL [Installer MySQL](https://doc.ubuntu-fr.org/mysql) ou [Installer MariaDB](https://doc.ubuntu-fr.org/mariadb)
 - Symfony version 5.0 minimum avec le CLI(Binaire) Symfony [Installer Symfony](https://symfony.com/doc/current/setup.html) --  [Installer Binaire Symfony](https://symfony.com/download) 
 - Composer [Installer Composer](https://getcomposer.org/download/) 
 - Npm  [Installer Npm](https://www.npmjs.com/get-npm) 
