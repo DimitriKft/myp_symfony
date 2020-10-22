@@ -11,7 +11,7 @@
         <hr class=""/>
         <div class="title_h2">
             <h2>Mes projets</h2>
-            <span>Mes projets</span>
+            <span></span>
         </div>       
     </div>
 
@@ -27,13 +27,14 @@
             <div class="projet_contents">
             <p class="projet_name">{{ project.name | u.truncate(20, '...') }}</p>
             <p class="projet_description">{{ project.description | u.truncate(110, '...') }}</p>
-        {% for technology in project.technology %}
-            {% if loop.index == 1 %}
-                {{ technology.name }}
-            {% endif %}
-        {% endfor %} 
         <a class="projet_linkPage" href="{{ path('displayProject',{'id':project.id}) }}" >En savoir plus </a>
             </div>
+        {% for technology in project.technology %}
+            {% if loop.index == 1 %}
+          <li class="projet_techno">{{ technology.name }}</li>
+                
+            {% endif %}
+        {% endfor %} 
         </div>
     {% endfor %}
         <div class="pagination">
