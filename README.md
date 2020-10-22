@@ -25,9 +25,13 @@ Ensuite, dans l'ordre taper les commandes dans votre terminal :
 
 - 3 ``yarn install``     afin d'installer toutes les dépendances yarn du projet.
 
-- 4 ``composer update`` nécessaire pour que composer installe certaine dépendance.
+- 4 installer la base de donnée MySQL. 
+   Pour paramétrer la création de votre base de donnée, rdv dans le fichier .env du projet, et modifier la variable d'environnement selon vos paramètres : 
 
-- 4 installer la base de donnée MySQL :                                              ``symfony console doctrine:database:create``
+  ``DATABASE_URL=mysql://User:Password@127.0.0.1:3306/nameDatabasse?serverVersion=5.7``
+  
+   Puis éxécuter la création de la base de donnée avec la commande : ``symfony console doctrine:database:create``
+
 
 - 5 Exécuter la migration en base de donnée :                                        ``symfony console doctrine:migration:migrate``
 
