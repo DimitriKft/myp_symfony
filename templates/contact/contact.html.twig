@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
-{% block title %}Hello ContactController!{% endblock %}
+{% block title %}MYP - Contact{% endblock %}
 {% block body %}
-    <section>
+<section>
     <div class="titles"
         data-aos="fade-right" 
         data-aos-duration="1000"
@@ -16,10 +16,10 @@
         <div class="information">
             <p>Pour une question où juste envie <br/> d'une discution</p>
             {% for user in users %}
-                <div>
-                    <span><ion-icon name="mail-outline" class="icon_contact"></ion-icon>{{ user.email }}</span>
-                    <span><ion-icon name="call-outline" class="icon_contact phone"></ion-icon>{{ user.phone }}</span>
-                </div>
+            <div>
+                <span><ion-icon name="mail-outline" class="icon_contact"></ion-icon>{{ user.email }}</span>
+                <span><ion-icon name="call-outline" class="icon_contact phone"></ion-icon>{{ user.phone }}</span>
+            </div>
             {% endfor %}
         </div>   
         <div class="section-form">
@@ -40,6 +40,6 @@
             {{ form_end(form) }}
             </div>
         </div>
-        </div>
-    </section>
+    </div>
+</section>
 {% endblock %}
