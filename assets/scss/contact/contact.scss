@@ -4,9 +4,7 @@
 .content_contact{
     display: flex;
     justify-content: space-around;
-    margin-bottom: 10%;
-    margin-top: 10%;
-    margin-left: 10%;
+    margin:10% 0 10% 10%;
     @media #{$medium-up}{
         flex-direction: column;
         width: auto;
@@ -15,6 +13,8 @@
         width: 40%;
         @media #{$medium-up}{
            width: auto;
+           @include display-column;
+
         }
         p{
             font-size: 1.3em;
@@ -36,32 +36,29 @@
             }
             span{
                 align-items: center;
-                color: $color_primary;
+                color: $first_color;
                 font-weight: 800;
                 font-size: 20px;
                 margin-bottom: 15%;
                 @media #{$medium-up}{
-                    font-size: 15px;
-                    align-content: flex-start;
+                    font-size: 20px;
+                    // align-content: flex-start;
+                    text-align: center;
                 }
                 
                 .icon_contact{
-                    color:black;
+                    color: $second_color;
                     border-radius: 5px;
                     font-size: 35px;
                     padding: 0.1em;
                     position: relative;
                     vertical-align: middle;
                     @media #{$medium-up}{
-                        margin-left: 0;
+                        margin-left: 10px;
                     }
                     
                 }
-                .phone{
-                    @media #{$medium-up}{
-                        margin-right: 20% !important;
-                    }
-                }
+               
             }
         }
     }
@@ -70,19 +67,15 @@
             width: 450px;
             height: 475px;
             border-radius: 25px;
-            box-shadow: 0px 3px 6px $shadow_title;
+            box-shadow: 0px 10px 16px $shadow_title;
             padding: 1em;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include display-column;
             @media #{$medium-up}{
                 width: 100%;
                 height: auto;
                 padding-right: none;
                 padding: none;
-                justify-content: center;
-                align-items: flex-center;
+                @include display-center;
             }
             input, textarea{
                 width: 300px;
