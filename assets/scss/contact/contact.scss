@@ -1,6 +1,10 @@
+// ---> PAGE CONTACT 
 @import "../variables.scss";
 
-// -> PAGE CONTACT 
+// Ici, tu trouvera tout les elements de la page CONTACT. 
+// La div Content_Contact regroupe les deux parties : Info & formulaire. 
+
+// Bloc principale
 .content_contact{
     display: flex;
     justify-content: space-around;
@@ -9,6 +13,7 @@
         flex-direction: column;
         width: auto;
     }
+    // Intro + Coordonnées
     .information{
         width: 40%;
         @media #{$medium-up}{
@@ -16,6 +21,7 @@
            @include display-column;
 
         }
+        // Intro
         p{
             font-size: 1.3em;
             text-align: start;
@@ -25,6 +31,7 @@
                 margin-top: 10%;
             }
         }
+        // Coordonnées
         div{
             margin-top: 20%;
             height: 50%;
@@ -42,10 +49,8 @@
                 margin-bottom: 15%;
                 @media #{$medium-up}{
                     font-size: 20px;
-                    // align-content: flex-start;
                     text-align: center;
                 }
-                
                 .icon_contact{
                     color: $second_color;
                     border-radius: 5px;
@@ -57,12 +62,13 @@
                         margin-left: 10px;
                     }
                     
-                }
-               
+                }               
             }
         }
     }
+    // Formulaire
     .section-form{
+        // Box formulaire
         .form{
             width: 450px;
             height: 475px;
