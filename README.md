@@ -1,16 +1,18 @@
 # Portfolio Symfony
 
-Développement du portfolio avec Symfony
+Make Your Portfolio !
 
-
-### Installation
+### Prérequi
 
 *Prérequi sur votre machine pour le bon fonctionnement de ce projet : 
 - PHP Version 7.4.11 [Installer PHP](https://www.php.net/manual/fr/install.php) --  [Mettre à jour PHP en 7.4 (Ubuntu)](https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/)
+- MySQL [Installer MySQL](https://doc.ubuntu-fr.org/mysql) ou [Installer MariaDB](https://doc.ubuntu-fr.org/mariadb)
 - Symfony version 5.0 minimum avec le CLI(Binaire) Symfony [Installer Symfony](https://symfony.com/doc/current/setup.html) --  [Installer Binaire Symfony](https://symfony.com/download) 
 - Composer [Installer Composer](https://getcomposer.org/download/) 
+- Npm  [Installer Npm](https://www.npmjs.com/get-npm) 
+- Yarn  [Installer Yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable) 
 
-Les étapes pour installer le projet.
+### Installation
 
 Après avoir cloné le projet avec ``git clone https://github.com/DimitriKft/myp_symfony.git``
 
@@ -24,9 +26,13 @@ Ensuite, dans l'ordre taper les commandes dans votre terminal :
 
 - 3 ``yarn install``     afin d'installer toutes les dépendances yarn du projet.
 
-- 4 ``composer update`` nécessaire pour que composer installe certaine dépendance.
+- 4 installer la base de donnée MySQL. 
+   Pour paramétrer la création de votre base de donnée, rdv dans le fichier .env du projet, et modifier la variable d'environnement selon vos paramètres : 
 
-- 4 installer la base de donnée MySQL :                                              ``symfony console doctrine:database:create``
+  ``DATABASE_URL=mysql://User:Password@127.0.0.1:3306/nameDatabasse?serverVersion=5.7``
+  
+   Puis éxécuter la création de la base de donnée avec la commande : ``symfony console doctrine:database:create``
+
 
 - 5 Exécuter la migration en base de donnée :                                        ``symfony console doctrine:migration:migrate``
 
@@ -40,34 +46,40 @@ Ensuite, dans l'ordre taper les commandes dans votre terminal :
 
 ## Démarrage
 
-Une fois sur l'application, il ne vous reste plus qu'a vous connecter au back-office en ajouter dans l'URL ``/admin``.
+Une fois sur l'application, il ne vous reste plus qu'a vous enregistrer ``/register``.
+Attention, l'application ne crée que des roles ADMIN,par mesure de sécurité, une fois votre utilisateur crée, il faut impérativement supprimer la route /register dans ``src/Controller/RegistrationController.php`` 
+Puis enfin loger vous ``/login`` rendez vous dans le backoffice ``/admin``, il ne vous reste plus qu'a parametrer votre administrateur et enregistrer vos projets ! 
 
-Par défaut le login et le mot de passe sont :
-  - Nom d’utilisateur :  ``admin@mail.com``
-  - Mot de Passe :       ``admin`` 
+## Fixture
+Le projet comprend des données factices pour vous permettre de tester rapidemmant le portfolio.
   
-Pour modifier vos paramètre personnel rendez vous dans le fichier : ``src/DataFixtures/UserFixtures.php``
-Ici vous pouvez modifier vos paramètres personnels (Email, Nom/Prénom, Numéro de téléphone, lien vers vos Linkedin/Github)
+Pour modifier vos fixtures rendez vous dans le fichier : ``src/DataFixtures/`` 
+Exemple : 
 
      public function load(ObjectManager $manager)
       {
-          $user = new User();
-          $user->setEmail('admin@mail.com');
-          $user->setRoles(['ROLE_ADMIN']);
-          $user->setPassword($this->passwordEncoder->encodePassword($user,'azeaze'));
-          $user->setLastName('Lerdorf');
-          $user->setFirstName('Rasmus');
-          $user->setPhone('0777882932');
-          $user->setLinkedin('https://www.linkedin.com/in/dimitri-klopfstein-12b399178/');
-          $user->setGithub('https://github.com/DimitriKft');
-          $manager->persist($user);
-
-          $manager->flush();
+        $user = new User();
+        $user->setEmail('admin@mail.com');
+        $user->setRoles(['ROLE_ADMIN']);
+        $user->setPassword($this->passwordEncoder->encodePassword($user,'admin'));
+        $user->setLastName('Smith');
+        $user->setFirstName('John');
+        $user->setPhone('07.77.88.29.32');
+        $user->setLinkedin('https://www.linkedin.com/in/dimitri-klopfstein-12b399178/');
+        $user->setGithub('https://github.com/DimitriKft');
+        $user->setUpdated(new \DateTime('06/04/2014'));
+        $manager->persist($user);
+    
+        $manager->flush();
       }
+      
+ Par défaut le login et le mot de passe sont :
+  - Nom d’utilisateur :  ``admin@mail.com``
+  - Mot de Passe :       ``admin`
 
 Une fois vos paramètre personalisé, relancer la commande : ``php bin/console doctrine:fixtures:load``
 
-Il ne vous reste plus qu'a retourner dans votre backoffice ``/admin`` et de mettre vos projets en ligne ! 
+Il ne vous reste plus qu'a retourner dans votre backoffice ``/admin`` et de modififier les projets en ligne ! 
   
 
 ## Fabriqué avec
@@ -89,6 +101,8 @@ Bundle utilisé dans le projet :
 ## Versions
 
 **Version** 0.0.1
+
+**Version DJANGO** Le projet est également disponible avec le [framework python DJANGO ](https://github.com/Abdellah-Sk/myp-django) 
 
 ## Auteurs
 * **Caroline Chatelon** _alias_  [@Rocalinecht](https://github.com/Rocalinecht)

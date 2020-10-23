@@ -4,35 +4,36 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
-         {{ encore_entry_link_tags('app') }}
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+            {{ encore_entry_link_tags('app') }}
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         {% endblock %}
-        {# <link rel="stylesheet" href="{{ asset('build/css/style.css') }}"> #}
-        {# {{ encore_entry_link_tags('app') }}     #}
-
     </head>
+
     <body>
-         {% for message in app.flashes('success') %}
+
+        {% for message in app.flashes('success') %}
             <div class="alert alert-success" style="margin-left: 400px;">
                 {{ message }}
             </div>
         {% endfor %}
-        <header>
-            <a href="/">
-            <div class="logo">
-                <span class="circle">J</span>
-                <span><p>Abdellah Skoundri</p></span>
-            </div>
-            </a>
-            {% for user in users %}
-            <div class="link">
-                <div class='item_logo'> <a href="{{ user.linkedin }}"><img src='{{ asset('img/Icon-linkedin.png') }}'/><span>Linkedin</span></a></div>
-                <div class='item_logo'> <a href="{{ user.github }}"><img src='{{ asset('img/Icon-github.png') }}'/><span>Github</span></a></div>
-            </div>
-            {% endfor %}
-        </header>
+
+        {% for user in users %}
+            <header>
+                <a href="/">
+                <div class="logo">
+                    <span class="circle">{{ user.firstname | slice(0, 1) }}</span>
+                    <span><p>{{ user.firstname }}  {{ user.lastname }}</p></span>
+                </div>
+                </a>
+                <div class="link">
+                    <div class='item_logo'> <a href="{{ user.linkedin }}"><img src='{{ asset('img/Icon-linkedin.png') }}'/><span>Linkedin</span></a></div>
+                    <div class='item_logo'> <a href="{{ user.github }}"><img src='{{ asset('img/Icon-github.png') }}'/><span>Github</span></a></div>
+                </div>
+            </header>
+        {% endfor %}
+
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
@@ -40,6 +41,7 @@
                 <li><a href="/contact">Contact</a></li>  
             </ul>
         </nav>
+
         <main>
             <div class="container">
                 {% block body %}{% endblock %}
@@ -47,39 +49,45 @@
         </main>
 
         <footer>
+<<<<<<< HEAD
             <a href="/">
             <div class="logo">
                 <span class="circle">J</span>
                 <span><p>Caroline Chatelon</p></span>
             </div>
             </a>    
+=======
+>>>>>>> bc71b114ecdec7ac6a00e682cbe330ee41230c35
             {% for user in users %}
-            <div class="link">
-                <div class='item_logo'> <a href="{{ user.linkedin }}"><img src='{{ asset('img/Icon-linkedin.png') }}'/></a></div>
-                <div class='item_logo'> <a href="{{ user.github }}"><img src='{{ asset('img/Icon-github.png') }}'/></a></div>
-            </div>
+                <a href="/">
+                <div class="logo">
+                    <span class="circle">{{ user.firstname | slice(0, 1) }}</span>
+                    <span><p>{{ user.firstname }}  {{ user.lastname }}</p></span>
+                </div>
+                </a>    
+                <div class="link">
+                    <div class='item_logo'> <a href="{{ user.linkedin }}"><img src='{{ asset('img/Icon-linkedin.png') }}'/></a></div>
+                    <div class='item_logo'> <a href="{{ user.github }}"><img src='{{ asset('img/Icon-github.png') }}'/></a></div>
+                </div>
             {% endfor %}
 
             <div>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/project">Projet</a></li>
-                <li><a href="/contact">Contact</a></li>  
-            </ul>
-            <div class="make_myp">
-                <p>Make with MYP <b> __</b></p>
-            </div>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/project">Projet</a></li>
+                    <li><a href="/contact">Contact</a></li>  
+                </ul>
+                <div class="make_myp">
+                    <p>Make with MYP <b> __</b></p>
+                </div>
             </div>
         </footer>
-        
 
         {% block javascripts %}
-        {{ encore_entry_script_tags('app') }}   
-        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script> 
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
+            {{ encore_entry_script_tags('app') }}   
+            <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script> 
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>AOS.init();</script>
         {% endblock %}
     </body>
 </html>

@@ -21,7 +21,7 @@ class ProjectFixtures extends Fixture
             $project = new Projects();
             $project->setName($faker->company);
             $project->setDescription($faker->text($maxNbChars = 200) );
-            $project->setImage($faker->imageUrl($width = 640, $height = 480) );
+            $project->setImage('portfolio.png' );
             $project->setRepoUrl($faker->url);
             $project->setWebsiteUrl($faker->url);
             $project->setCreatedat($faker->dateTime($max = 'now', $timezone = null));

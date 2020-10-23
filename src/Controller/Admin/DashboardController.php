@@ -3,7 +3,6 @@
 namespace App\Controller\Admin;
 
 use App\Entity\User;
-use App\Entity\Users;
 use App\Entity\Projects;
 use App\Entity\Technologies;
 use Symfony\Component\HttpFoundation\Response;
@@ -22,7 +21,6 @@ class DashboardController extends AbstractDashboardController
     {
              // redirect to some CRUD controller
              $routeBuilder = $this->get(CrudUrlGenerator::class)->build();
-
              return $this->redirect($routeBuilder->setController(ProjectsCrudController::class)->generateUrl());
     }
 
@@ -30,7 +28,6 @@ class DashboardController extends AbstractDashboardController
     {
         return Dashboard::new()
             ->setTitle('<a href="/" style="color:blue;">Retour portfolio</a>');
-        
     }
 
     
@@ -38,11 +35,10 @@ class DashboardController extends AbstractDashboardController
     {
         return [
             MenuItem::linkToDashboard('Dashboard', 'fa fa-home'),
-
             MenuItem::section('C.R.U.D'),
-            MenuItem::linkToCrud('Projets', 'fa fa-tags', Projects::class),
-            MenuItem::linkToCrud('Technologie', 'fa fa-tags', Technologies::class),
-            MenuItem::linkToCrud('Utilisateurs', 'fa fa-tags', User::class)
+            MenuItem::linkToCrud('Projets', 'fa fa-laptop-code', Projects::class),
+            MenuItem::linkToCrud('Technologie', 'fa fa-code', Technologies::class),
+            MenuItem::linkToCrud('Administrateur', 'fa fa-user-tie', User::class)
         ];
     }
 }

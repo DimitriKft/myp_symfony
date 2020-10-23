@@ -18,7 +18,7 @@ class HomeController extends AbstractController
         $project2 = $projectsRepository->findBy(array(),array('id'=>'DESC'),1,1); 
         $project3 = $projectsRepository->findBy(array(),array('id'=>'DESC'),1,2); 
         $users    = $userRepository->findAll(); 
-        return $this->render('home/index.html.twig', [
+        return $this->render('home/home.html.twig', [
             'project1' => $project1,
             'project2' => $project2,
             'project3' => $project3,
