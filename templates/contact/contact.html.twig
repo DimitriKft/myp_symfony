@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 {% block title %}Hello ContactController!{% endblock %}
 {% block body %}
+    <section>
     <div class="titles"
         data-aos="fade-right" 
         data-aos-duration="1000"
@@ -8,11 +9,10 @@
         <hr class="project"/>
         <div class="title_h2">
             <h2>Contact</h2>
-            <span>Contact</span>
         </div>       
     </div>
-
-    <section class="content_contact">
+    <br>
+    <div class="content_contact">
         <div class="information">
             <p>Pour une question où juste envie <br/> d'une discution</p>
             {% for user in users %}
@@ -39,6 +39,7 @@
                 </span>
             {{ form_end(form) }}
             </div>
+        </div>
         </div>
     </section>
 {% endblock %}
