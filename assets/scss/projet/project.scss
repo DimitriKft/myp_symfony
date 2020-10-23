@@ -24,8 +24,13 @@ section{
             vertical-align: middle;
             display: flex;
             @media #{$medium-up}{
+                width: 90%;
                 height: auto;
                 padding: auto;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: center;
+                // align-items: center;
                 @include display-column;
             }
             img{
@@ -42,27 +47,24 @@ section{
             .projet_contents{
                 background-color: $first_color;
                 z-index:2;
-                width: 35%;
+                width: 30%;
                 padding: 2em;
-                margin-top: 0;
                 position: absolute;
                 text-align: start;
                 align-content: center;
-                // margin-left: 35%;
-                // margin-top: 5%;
                 margin: 7% 0 0 35%;
-
                 @media #{$medium-up}{
                     display: flex;
                     flex-direction: column;
                     margin-left: 0;
                     position: relative;
-                    width: 85%;
+                    width: 60%;
                 }
                 .projet_name{
                     color: $white_color;
                     font-size: 1.5em;
                     font-weight: 700;
+                    margin-top: 0;
                 }
                 .projet_description{
                     color: $white_color;
@@ -70,7 +72,7 @@ section{
                 }
                 .projet_linkPage{
                     font-style: oblique;
-                    color: $background;
+                    color: $white_color;
                 }
             }
             .projet_techno{
@@ -81,8 +83,8 @@ section{
                 font-weight: 700;
                 opacity: 0.5;
                 z-index: 3;
-                left: 65%;
-                margin-top: 20%;
+                left: 60%;
+                margin-top: 19%;
                 position: absolute;
                 @media #{$medium-up}{
                     font-size: 50px;
@@ -103,9 +105,6 @@ section{
                 @media #{$medium-up}{
                     margin-left: 0;
                 }
-            }
-            .projet_techno{
-                left: 20%;
             }
         }
     }

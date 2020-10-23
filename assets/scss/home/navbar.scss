@@ -16,18 +16,17 @@ header {
         width:20%;
         height: 100%;
     }
-    .logo, %logo {
+    .logo{
         width: 80%;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        vertical-align: middle;
         margin: 5% 0 0 5%;
         .circle{
             height: 45px;
             width: 45px;
-            font-size: 2em;
             border-radius: 50%;
+            font-size: 2em;
             border:2px solid $second_color;
             @include display-center;
         }
@@ -41,7 +40,7 @@ header {
     .link{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 80%;
         margin: 35px 0 0 10%;
         .item_logo{
@@ -53,15 +52,17 @@ header {
                 height: 70%;
                 vertical-align: middle;
                 @media #{$medium-up}{margin-right: 0px;}  
+
             }
             span{
                 font-weight: 700;
                 font-size: 1.25em;
-                text-decoration: none;
+                text-decoration: none;               
                 @media #{$medium-up}{display: none;}  
             }
         }
-    }
+        
+    }  
 }
 // --> Navbar navigation
 nav {
@@ -85,12 +86,23 @@ nav {
             margin: 20px;
             font-size: 1.3em;
         }
+    }
+}
+
+a{
+    // color: black;
+    text-decoration: none;
+    &:hover{
+        // color:black;
+        font-weight: 700;
+        text-decoration: none;
         
     }
 }
 
 // -> Footer
 footer{
+    
     border-top : 2px solid $border_color;;
     display:flex;
     justify-content: space-between;
@@ -101,24 +113,24 @@ footer{
     height: 20%;
     background-color: $white_color; 
     .logo{
-        width: 110%;
         display: flex;
+        width: 110%;
         justify-content: space-around;
+        margin-top: 5%;
+        margin-left: 5%;
         align-items: center;
-        vertical-align: middle;
-        margin: 5% 0 0 5%;
         .circle{
             height: 45px;
             width: 45px;
-            font-size: 2em;
-            border-radius: 50%;
             border:2px solid $second_color;
+            border-radius: 50%;
             @include display-center;
+            font-size: 2em;
         }
-        span p {
-            font-weight: 900;
+        span {
+            font-weight: 800;
             font-size: 1.25em;
-            margin-top: 15px;
+            text-decoration: none;
             @media #{$medium-up}{display: none;} 
         }
     }
@@ -136,14 +148,15 @@ footer{
         height: 70px;
         z-index: 1;
         top: 0;
-        width: 100%;
         left: 0;
+        margin-right: 5%;
         @include display-end;
         @media #{$medium-up}{width: auto;} 
         li {
             display: inline;
             list-style: none;
             margin: 20px;
+            font-weight: 600;
             @media #{$medium-up}{
                 font-size: small;
                 margin: 10%;
@@ -153,6 +166,7 @@ footer{
     .make_myp{
         text-align: end;
         margin-right: 10%;
+
         p{
             font-weight: 700;
             color: $first_color;
@@ -161,4 +175,3 @@ footer{
         }
     }
 }
-

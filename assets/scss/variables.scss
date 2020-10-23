@@ -7,10 +7,6 @@ $shadow_title: rgba(239,239,239, 0.85);
 $border_color: #F7F7F7;
 $white_color: rgb(255,255,255);
 
-$border: #F7F7F7;
-$background: #FFFFFF;
-$color_primary: rgb(15, 76, 129);
-
 // Responsive
 $medium-up:"only screen and (max-width: 768px)";
 
@@ -21,16 +17,8 @@ body, html {
     font-family: 'Roboto', sans-serif;
     color:$second_color;    
 }
-span, a{ color:$second_color;}
-a{
-    text-decoration: none;
-    &:hover{
-        color:$first_color;
-        font-weight: 800;
-        text-decoration: none;       
-    }
-}
-
+span, a{ color: $second_color;}
+// Div principal qui contient tout les elemnt des diferente page 
 .container {
     width: 75%;
     position: relative;
@@ -51,32 +39,23 @@ hr{
     }
 }
 
-
+a:hover{ color: $first_color;}
 h1{
     font-weight: 900;
     font-size: 4em;
+    margin-bottom: 0;
     @media #{$medium-up}{font-size: 3em;}
 }
 
 .titles{
-    padding-left: 80px;
-    // border:3px solid red;
-    @media #{$medium-up}{
-        // margin-right: 105px;
-        padding-left: 30px;
-        width: auto;
-
-        
-    }
+    padding-left: 100px;
     hr{
         margin-top: 2.5% ;
         margin-left: -90px;
         position: absolute;
         @media #{$medium-up}{
-            margin-left: -60px;
+            margin-right: 105px;
             width: 43px;
-            margin-top: 17px ;
-
         }
     }
     h2{
@@ -91,8 +70,8 @@ h1{
             letter-spacing: none;
         }
     }
+       
 }
-
 h3{    
     font-weight: 600;
     font-size: 1.35em;
@@ -117,7 +96,7 @@ button{
     &:hover{
         background-color: $first_color;
         color: $white_color;
-        border:none;
+        border:none;    
     }
     @media #{$medium-up}{margin: 10%;}
 }
@@ -125,9 +104,9 @@ button{
 ion-icon {
     font-size: 25px;
     margin-right: 15px;
-  }
+}
 
-//  Animation header 
+// Animation header 
 .animate__animated{
     --animate-duration: 3s;
 }  
@@ -148,4 +127,7 @@ ion-icon {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+section{
+    border:4px solid red;
 }

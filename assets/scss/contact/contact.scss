@@ -1,101 +1,97 @@
+// ---> PAGE CONTACT 
 @import "../variables.scss";
 
-// -> PAGE CONTACT 
+// Ici, tu trouvera tout les elements de la page CONTACT. 
+// La div Content_Contact regroupe les deux parties : Info & formulaire. 
+
+
+// Bloc Principale
 .content_contact{
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 10%;
-    margin-top: 5%;
-    margin-left: 10%;
+    justify-content: space-around; 
+    width: 80%;
+    margin: 0 0 10% 10%;
     @media #{$medium-up}{
         flex-direction: column;
         width: auto;
     }
+    // Texte + coordonnées
     .information{
         width: 40%;
         @media #{$medium-up}{
            width: auto;
+           @include display-column;
         }
+        // Texte
         p{
             font-size: 1.3em;
             text-align: start;
-            padding-top:1em ;
             @media #{$medium-up}{
                 font-size: 1em;
                 margin-top: 10%;
             }
         }
+        // Coordonnée
         div{
             margin-top: 20%;
             height: 50%;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             @media #{$medium-up}{
                 margin-top: none;
                 width: 100%;
             }
             span{
                 align-items: center;
-                color: $color_primary;
+                color: $first_color;
                 font-weight: 800;
                 font-size: 20px;
-                margin-bottom: 15%;
+                margin-bottom: 10%;
                 @media #{$medium-up}{
                     font-size: 15px;
-                    align-content: flex-start;
-                }
-                
+                    text-align: center;
+                }                
                 .icon_contact{
-                    color:black;
+                    color:$second_color;
                     border-radius: 5px;
                     font-size: 35px;
                     padding: 0.1em;
                     position: relative;
                     vertical-align: middle;
                     @media #{$medium-up}{
-                        margin-left: 0;
-                    }
-                    
-                }
-                .phone{
-                    @media #{$medium-up}{
-                        margin-right: 20% !important;
+                        margin: 0;
                     }
                 }
             }
         }
     }
     .section-form{
+        // Box du formulaire
         .form{
-            width: 450px;
-            height: 475px;
+            width: 400px;
+            height: 400px;
             border-radius: 25px;
-            box-shadow: 0px 3px 6px $shadow_title;
+            box-shadow: 0px 10px 16px $shadow_title;
             padding: 1em;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            padding-right: 5%;
+            @include display-column;
             @media #{$medium-up}{
                 width: 100%;
                 height: auto;
                 padding-right: none;
                 padding: none;
-                justify-content: center;
-                align-items: flex-center;
+                @include display-center;
             }
             input, textarea{
-                width: 300px;
+                width: 250px;
                 display: flex;
                 align-items: flex-end;
-                text-align: end;
                 margin-bottom: 15px;
                 vertical-align: text-top;
                 @media #{$medium-up}{
-                    width: 100%;
-                    
+                    width: 80%;
                 }
-                
             }
         }
     }

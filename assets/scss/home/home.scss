@@ -1,17 +1,212 @@
+// @import "navbar.scss";
+// @import "../variables.scss";
+
+// // -> PAGE ACCUEIL
+
+// // Header : profil 
+// .header{
+//     // @include display-center;
+//     display: flex;
+//     align-items: center;
+//     @media #{$medium-up}{ 
+//          @include display-column;  
+//     }
+//     .profil_picture{
+//         height: 550px;
+//         width: auto;
+//         border-radius: 13px;
+//         margin-right: 3%;
+//         box-shadow: 14px 15px 31px #F2F2F2;
+//         @media #{$medium-up}{
+//             height: 350px !important; 
+//             width: 250px !important;  
+//         }
+//     }
+//     span{
+//         border:2px solid transparent;
+//         margin-bottom: 25%;
+//         margin-right: 2%;
+//         .hr_title{
+//             margin-top: 35%;
+//             @media #{$medium-up}{ 
+//                 position: absolute;
+//                 margin-top: 14%;
+//                 margin-left: -7%;
+//             }
+//         }
+//     }
+//     div{
+//         width: 70%;
+//         display: flex;
+//         justify-content: start;
+//         flex-direction: column;
+//         @media #{$medium-up}{ 
+//             width: auto;
+//             text-align: center;
+//             margin-top: 7%;
+//         } 
+//         p{font-size: 0.75em;}    
+//     } 
+// }
+// // fleche "voir projet"
+// .view_project{
+//     position: absolute;
+//     margin: -10% 0 0 100%;
+//     writing-mode: vertical-rl;
+//     text-orientation: mixed;
+//     vertical-align: top;
+//     @media #{$medium-up}{display: none;}
+//     span{
+//         text-transform: uppercase;
+//         font-size: small;
+//         color:$first_color;
+//         font-weight: normal;  
+//     }
+// }
+// // Projet
+// section{
+//     .title_work{margin-top: 10%;}
+//     .projets_all{
+//         flex-direction: column;
+//         width: 100%;
+//         margin :5% 0 10% 0;
+//         .box{
+//             display: flex;
+//             flex-direction: row;
+//             justify-content: center;
+//             @media #{$medium-up}{ 
+//                 flex-direction: column;
+//             }
+//             .box1,.box2{
+//                 width: auto;
+//                 margin:5%;
+//                 @media #{$medium-up}{ 
+//                     margin: 0;
+//                 }
+//                 .image{
+//                     position: relative;
+//                     background-size: contain;
+//                     background-clip: content-box;
+//                     border-radius: 20px;
+//                     background-position: center;
+//                     margin: 7%;
+//                     overflow: hidden;
+//                     }
+//                 .image__title{
+//                     position: absolute;
+//                     left: 0px;
+//                     right: 0;
+//                     bottom: 0;
+//                     height: 100%;
+//                     width: 100%;
+//                     margin-left: 0;
+//                     display: flex;
+//                     justify-content: flex-start;
+//                     align-items: flex-end;
+//                     background-color: $first_color;
+//                     opacity: 0;
+//                     transition: all 0.4s ease 0s; 
+//                     p{
+//                         color: $white_color;
+//                         font-size: 1.5em;
+//                         font-weight: 700;
+//                         padding: 1em;
+//                     }
+//                 }
+//                 .image:hover .image__title{
+//                     opacity: 0.80;
+//                 }                      
+//             }
+//             .box1{ justify-content: flex-end;}
+//             .box2{ @include display-column;}
+//                 .projet1{
+//                     width: 550px;
+//                     @media #{$medium-up}{ 
+//                         width: 300px;
+//                     }
+//                     img{
+//                         background-position: center;
+//                         width: 550px;
+//                         @media #{$medium-up}{ 
+//                             width: 300px;
+//                         }
+//                     }                   
+//                 }
+//                 .projet2{
+//                     width: 450px;
+//                     height: auto;
+//                     margin-left: 27% !important;
+//                     @media #{$medium-up}{ 
+//                         margin-left: 30px !important;
+//                         width: 300px;
+//                     }
+//                     img{
+//                         background-position: center;
+//                         width: 450px;
+//                         @media #{$medium-up}{ 
+//                             width: 300px;
+//                         }
+//                     }
+//                 }
+//                 .projet3{
+//                     width: 310px;
+//                     img{
+//                         background-position: center;
+//                         width: 310px;
+//                     }
+//                 }
+//                 .all_project{
+//                     width: 200px;
+//                     height: 70px;
+//                     background-color: $first_color;
+//                     padding: 1em;
+//                     margin: 50px 0 50px 0;
+//                     border-radius: 12px;
+//                     @include display-center;
+//                     cursor: pointer;
+//                     p{
+//                         color: $white_color;
+//                         font-size: 1.5em;
+//                         font-weight: 700;
+//                     }
+//                 }
+//             }
+//         }    
+//     }         
+// // Contact
+// section{
+//     .title-contact{
+//         margin-left: 40%;
+//         @media #{$medium-up}{ margin-left: 20%;}
+//         hr{margin-top: 5%;}
+//     }
+//     .intro_contact{
+//         margin: 10% 5%;
+//         text-align: center;
+//         padding: 1em;
+//         p{
+//             font-size: 1.5em;
+//             font-weight: 700;
+//             span:hover{
+//                 text-decoration: underline;
+//                 color: $first_color;
+//             }
+//         }
+//     }
+// }
 @import "navbar.scss";
 @import "../variables.scss";
 
 // -> PAGE ACCUEIL
 
-// Header : profil 
+// Header : profil
 .header{
-    // @include display-center;
     display: flex;
     align-items: center;
     @media #{$medium-up}{ 
-         @include display-column;  
+        @include display-column;
     }
-    .profil_picture{
+    .profil_picture {
         height: 550px;
         width: auto;
         border-radius: 13px;
@@ -24,8 +219,7 @@
     }
     span{
         border:2px solid transparent;
-        margin-bottom: 25%;
-        margin-right: 2%;
+        margin-bottom: 15%;
         .hr_title{
             margin-top: 35%;
             @media #{$medium-up}{ 
@@ -40,12 +234,14 @@
         display: flex;
         justify-content: start;
         flex-direction: column;
+        margin-left: 2%;
         @media #{$medium-up}{ 
             width: auto;
             text-align: center;
+            align-items: center;
             margin-top: 7%;
-        } 
-        p{font-size: 0.75em;}    
+        }
+        p{font-size: 0.75em; width: 80%;}
     } 
 }
 // fleche "voir projet"
@@ -54,13 +250,12 @@
     margin: -10% 0 0 100%;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    vertical-align: top;
     @media #{$medium-up}{display: none;}
     span{
         text-transform: uppercase;
         font-size: small;
         color:$first_color;
-        font-weight: normal;  
+        font-weight: normal;
     }
 }
 // Projet
@@ -80,9 +275,6 @@ section{
             .box1,.box2{
                 width: auto;
                 margin:5%;
-                @media #{$medium-up}{ 
-                    margin: 0;
-                }
                 .image{
                     position: relative;
                     background-size: contain;
@@ -91,7 +283,7 @@ section{
                     background-position: center;
                     margin: 7%;
                     overflow: hidden;
-                    }
+                }
                 .image__title{
                     position: absolute;
                     left: 0px;
@@ -116,9 +308,9 @@ section{
                 .image:hover .image__title{
                     opacity: 0.80;
                 }                      
-            }
-            .box1{ justify-content: flex-end;}
-            .box2{ @include display-column;}
+                }
+                .box1{ justify-content: flex-end;}
+                .box2{ @include display-column;}
                 .projet1{
                     width: 550px;
                     @media #{$medium-up}{ 
@@ -127,15 +319,13 @@ section{
                     img{
                         background-position: center;
                         width: 550px;
-                        @media #{$medium-up}{ 
-                            width: 300px;
-                        }
-                    }                   
+                        @media #{$medium-up}{ width: 300px;}
+                    } 
                 }
                 .projet2{
                     width: 450px;
                     height: auto;
-                    margin-left: 27% !important;
+                    margin-left: 29% !important;
                     @media #{$medium-up}{ 
                         margin-left: 30px !important;
                         width: 300px;
@@ -170,23 +360,25 @@ section{
                         font-weight: 700;
                     }
                 }
+
             }
         }    
     }         
+
 // Contact
 section{
     .title-contact{
         margin-left: 40%;
-        @media #{$medium-up}{ margin-left: 20%;}
-        hr{margin-top: 5%;}
-    }
+        @media #{$medium-up}{ margin-left: 20%; }
+            hr{margin-top: 5%;}
+        }
     .intro_contact{
         margin: 10% 5%;
         text-align: center;
         padding: 1em;
         p{
             font-size: 1.5em;
-            font-weight: 700;
+            font-weight: 500;
             span:hover{
                 text-decoration: underline;
                 color: $first_color;
@@ -194,3 +386,4 @@ section{
         }
     }
 }
+
