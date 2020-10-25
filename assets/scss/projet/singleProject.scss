@@ -5,25 +5,22 @@
 .singleProjet_content{
     width: 100%;
     padding: 1em;
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-bottom: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 5% 0 5% 5%;
+    @include display-center;
     @media #{$medium-up}{
         width: 120%;
         padding: 0;
         margin-left: -5%;
     }
     .singleProjet{
+        @include display-column;
         @media #{$medium-up}{ 
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin-top: 35%;
+            width: 90%;
+            @include display-center;
         }
         img{
+            width: 90%;
             @media #{$medium-up}{
                 height: auto;
             }
@@ -33,16 +30,19 @@
             width: 90%;
             height: auto;
             @media #{$medium-up}{
-                width: 100%;
-                margin-top: 10%;
+                width: 80%;
+                margin-top: 20%;
             }
             hr{
-                border:2px solid $color_primary;
-                width: 43px;
-                margin-bottom: -2%;
-                margin-left: -10%;
+                border:3px solid $first_color;
+                width: 40px;
+                position: relative;
+                top: -5px ;
+                margin: 0 0 -2% -7%;
                 @media #{$medium-up}{
-                    margin-top: 2%;
+                    top: 5px;
+                    left: -12%;
+                    width: 23px;
                 }
             }
             p{
@@ -68,11 +68,11 @@
             width: 370px;
             height: auto;
             padding: 1em;
-            justify-content: center;
-            align-items: flex-start;
+            @include display-column;
             line-height: 50px;
-            background-color: $color_primary;
+            background-color: $first_color;
             border-radius: 15px;
+            vertical-align: middle;
             @media #{$medium-up}{
                 height: 70%;
                 width: auto;
@@ -80,15 +80,12 @@
                 margin-bottom: 15%;
             }
             span{
-                align-items: center;
-                justify-self: start;
-                padding-left: 15%;
                 @media #{$medium-up}{
-                   padding-left: 5%;
-                }
+                    padding-left: 5%;
+                 }
                 a{
                     font-size: large;
-                    color: white;
+                    color: $white_color;
                     @media #{$medium-up}{
                         font-size: medium;
                     }
@@ -100,12 +97,16 @@
             width: 40%;
             padding: 1em;
             hr{
-                border:2px solid $color_primary;
-                width: 33px;
-                margin-bottom: -5%;
-                margin-left: -20%;
+                border:3px solid $first_color;
+                width: 43px;
+                position: relative;
+                top: 7px;
+                margin :0 0 -2% -20%;
                 @media #{$medium-up}{
-                   margin-top: 2%;
+                    margin-top: 2%;
+                    top: 9px;
+                    left: -35%;
+                    width: 23px;
                 }
             }
             li{
@@ -120,8 +121,9 @@
     .back{
         margin: 5%;
         text-align: center;
+        font-weight: 600;
         a :hover{
-            color:$color_primary;
+            color:$first_color;
         }
     }
 }
