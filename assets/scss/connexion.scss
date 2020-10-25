@@ -1,6 +1,6 @@
 @import "variables.scss";
 
-.login_container{
+.login_container, .register_container{
     height: 67vh;
     width: 45%;
     margin-left: 25%;
@@ -8,5 +8,16 @@
     background-color: $shadow_title;
     border-radius: 15px;
     @include display-center;
-    // border:2px solid red;s
+
+}
+.register_container{
+    @include display-column;
+    input{
+        margin-bottom: 10%;
+        margin-left: 5px;
+    }
+    button{
+        border: 2px solid $first_color;
+        text-transform: uppercase;
+    }
 }
