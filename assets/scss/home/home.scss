@@ -163,7 +163,7 @@ section{
                     width: 200px;
                     height: 70px;
                     background-color: $first_color;
-                    padding: 1em;
+                    // padding: 1em;
                     margin: 50px 0 50px 0;
                     border-radius: 12px;
                     @include display-center;
@@ -172,6 +172,7 @@ section{
                         color: $white_color;
                         font-size: 1.5em;
                         font-weight: 700;
+                        padding-top: 7%;
                     }
                 }
             }
