@@ -65,11 +65,15 @@
 }
 // Projet
 section{
-    .title_work{margin-top: 10%;}
+   
+    .title_work{margin-top: 5%;}
     .projets_all{
         flex-direction: column;
         width: 100%;
-        margin :5% 0 10% 0;
+        margin :15% 0 10% 0;
+        @media #{$medium-up}{ 
+            margin-top: 45%;
+        }
         .box{
             display: flex;
             flex-direction: row;
@@ -184,6 +188,9 @@ section{
         margin: 10% 5%;
         text-align: center;
         padding: 1em;
+        @media #{$medium-up}{ 
+            margin-top: 35%;
+        }
         p{
             font-size: 1.5em;
             font-weight: 700;
