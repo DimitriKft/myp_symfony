@@ -1,0 +1,12 @@
+@import "variables.scss";
+
+.login_container{
+    height: 67vh;
+    width: 45%;
+    margin-left: 25%;
+    padding: 1em;
+    background-color: $shadow_title;
+    border-radius: 15px;
+    @include display-center;
+    // border:2px solid red;s
+}
