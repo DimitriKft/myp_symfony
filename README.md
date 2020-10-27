@@ -4,7 +4,7 @@ Make Your Portfolio !
 
 ### Prérequi
 
-*Prérequi sur votre machine pour le bon fonctionnement de ce projet : 
+*Prérequis sur votre machine pour le bon fonctionnement de ce projet : 
 - PHP Version 7.4.11 [Installer PHP](https://www.php.net/manual/fr/install.php) --  [Mettre à jour PHP en 7.4 (Ubuntu)](https://www.cloudbooklet.com/upgrade-php-version-to-php-7-4-on-ubuntu/)
 - MySQL [Installer MySQL](https://doc.ubuntu-fr.org/mysql) ou [Installer MariaDB](https://doc.ubuntu-fr.org/mariadb)
 - Symfony version 5.0 minimum avec le CLI(Binaire) Symfony [Installer Symfony](https://symfony.com/doc/current/setup.html) --  [Installer Binaire Symfony](https://symfony.com/download) 
@@ -16,7 +16,7 @@ Make Your Portfolio !
 
 Après avoir cloné le projet avec ``git clone https://github.com/DimitriKft/myp_symfony.git``
 
-Executez la commande ``cd myp_symfony`` pour vous rendre dans le dossier depuis le terminal.
+Exécutez la commande ``cd myp_symfony`` pour vous rendre dans le dossier depuis le terminal.
 
 Ensuite, dans l'ordre taper les commandes dans votre terminal : 
 
@@ -31,7 +31,7 @@ Ensuite, dans l'ordre taper les commandes dans votre terminal :
 
   ``DATABASE_URL=mysql://User:Password@127.0.0.1:3306/nameDatabasse?serverVersion=5.7``
   
-   Puis éxécuter la création de la base de donnée avec la commande : ``symfony console doctrine:database:create``
+   Puis exécuter la création de la base de donnée avec la commande : ``symfony console doctrine:database:create``
 
 
 - 5 Exécuter la migration en base de donnée :                                        ``symfony console doctrine:migration:migrate``
@@ -46,12 +46,12 @@ Ensuite, dans l'ordre taper les commandes dans votre terminal :
 
 ## Démarrage
 
-Une fois sur l'application, il ne vous reste plus qu'a vous enregistrer ``/register``.
-Attention, l'application ne crée que des roles ADMIN,par mesure de sécurité, une fois votre utilisateur crée, il faut impérativement supprimer la route /register dans ``src/Controller/RegistrationController.php`` 
-Puis enfin loger vous ``/login`` rendez vous dans le backoffice ``/admin``, il ne vous reste plus qu'a parametrer votre administrateur et enregistrer vos projets ! 
+Une fois sur l'application, il ne vous reste plus qu'a vous enregistrez ``/register``.
+Attention, l'application ne crée que des rôles ADMIN,par mesure de sécurité, une fois votre utilisateur crée, il faut impérativement supprimer la route /register dans ``src/Controller/RegistrationController.php`` 
+Puis enfin loger vous ``/login`` rendez vous dans le backoffice ``/admin``, il ne vous reste plus qu'a paramétrer votre administrateur et enregistrer vos projets ! 
 
 ## Fixture
-Le projet comprend des données factices pour vous permettre de tester rapidemmant le portfolio.
+Le projet comprend des données factices pour vous permettre de tester rapidement le portfolio.
   
 Pour modifier vos fixtures rendez vous dans le fichier : ``src/DataFixtures/`` 
 Exemple : 
@@ -73,13 +73,13 @@ Exemple :
         $manager->flush();
       }
       
- Par défaut le login et le mot de passe sont :
+ Par défaut, le login et le mot de passe sont :
   - Nom d’utilisateur :  ``admin@mail.com``
   - Mot de Passe :       ``admin`
 
-Une fois vos paramètre personalisé, relancer la commande : ``php bin/console doctrine:fixtures:load``
+Une fois vos paramètres personnalisés, relancer la commande : ``php bin/console doctrine:fixtures:load``
 
-Il ne vous reste plus qu'a retourner dans votre backoffice ``/admin`` et de modififier les projets en ligne ! 
+Il ne vous reste plus qu'a retourner dans votre backoffice ``/admin`` et de modifier les projets en ligne ! 
   
 
 ## Fabriqué avec
