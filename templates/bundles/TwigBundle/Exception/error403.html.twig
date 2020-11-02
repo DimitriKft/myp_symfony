@@ -1,15 +1,11 @@
 {% extends 'base.html.twig' %}
 {% block title %}Erreur 403{% endblock %}
 {% block body %}
-    <section class="animate__animated animate__fadeInLeft">
-        <img src='{{ asset('/img/profil.jpg') }}'/>
-        <span>
-            <hr>
-        </span>
-        <div >
-            <h1 >Erreur 403</h1>
+    <section class="error">        
+        <div>
+            <h2>403</h2>
             <h3>Oups... Vous n'avec pas l'autorisation à vous rendre ici !</h2>
-            <a href="/" style="color:blue;">Retour en page d'acceuil</a>    
+            <a class="button_error" href="/">Retour en page d'acceuil</a>
         </div>
     </section>
 {% endblock %}
