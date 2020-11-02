@@ -131,5 +131,22 @@ section{
         @media #{$medium-up}{
             margin-left: 45%;
         }
+        span{
+        // border:3px solid blue;
+        padding: 0.75em;
+        font-size: 1.25em;
+        }
+        .current {
+        font-weight: 900;
+        color:$first_color;
+        }
+        .last, .next, .first, .previous {
+            background-color: $third_color;
+            opacity: 0.25;
+            border-radius: 5px;
+            margin: 0 15% 0 15%;
+        }
+
+        }
     }
-}    
+   
