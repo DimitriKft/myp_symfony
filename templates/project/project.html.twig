@@ -26,12 +26,12 @@
                         {% else %}
                             <ion-icon name="globe-outline"></ion-icon><a href="{{ project.websiteUrl }}">{{ project.websiteUrl }}</a>
                         {% endif %}  
-                </span>
-                <span>
-                    {% if project.repoUrl == null %}
-                    {% else %}
-                        <ion-icon name="logo-github"></ion-icon><a href="{{ project.repoUrl }}">{{ project.repoUrl }}</a>
-                    {% endif %}
+                    </span>
+                    <span>
+                        {% if project.repoUrl == null %}
+                        {% else %}
+                            <ion-icon name="logo-github"></ion-icon><a href="{{ project.repoUrl }}">{{ project.repoUrl }}</a>
+                        {% endif %}
                     </span>
                 </div>
                 <div class="singleProjet_tech">
