@@ -43,8 +43,9 @@ header {
         flex-direction: column;
         justify-content: space-between;
         width: 80%;
-        margin: 35px 0 0 10%;
+        margin: 55px 0 0 15%;
         .item_logo{
+
             margin-bottom: 7%;
             display: flex;
             vertical-align: middle;
@@ -98,7 +99,7 @@ footer{
     z-index: 3 ;
     position: relative;
     margin-bottom:0;
-    height: 20%;
+    height: 25%;
     background-color: $white_color; 
     .logo{
         width: 110%;
