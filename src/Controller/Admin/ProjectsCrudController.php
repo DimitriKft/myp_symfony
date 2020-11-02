@@ -36,7 +36,6 @@ class ProjectsCrudController extends AbstractCrudController
             TextField::new('repo_url'),
             TextField::new('website_url'),
             DateField::new('createdat'),
-            AssociationField::new('user'),
             AssociationField::new('technology')
         ];
 
